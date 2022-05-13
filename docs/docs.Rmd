@@ -960,25 +960,21 @@ my_starwars_plt |>
 .panel[.panel-name[**R code - Final Plot**]
 
 ```{r code for final plot}
-# created a factor variable sexF 
-# modified  order (levels) and labels for plot
+# created a factor variable sexF to modify order (levels) for plot
 my_starwars_plt <- my_starwars_plt |>
   mutate(sexF = factor(sex, 
                        levels = c("male", "female", "none"),
                        labels =c("Male", "Female", "None")))
 
-# used new factor variable
-# moved legend to the bottom
-# formatted titles, captions, axis labels with labs command
+# formatted plot with factor variable, text formatted, and borders
 sw_boxplot4 <- my_starwars_plt |> 
   ggplot() +
-  geom_boxplot(aes(x=species, y=bmi, fill=sexF)) +
+  geom_boxplot(aes(x=species, y=bmi, fill=sexF)) + 
   theme_classic() + 
   labs(title="Comparison of Human and Droid BMI",
        subtitle="22 Humans and 4 Droids from Star Wars Universe",
        caption="Data Source: dplyr package in R",
        x="",y="BMI", fill="Sex") + 
-  
   theme(plot.title = element_text(size = 20),
         plot.subtitle = element_text(size = 15),
         axis.title = element_text(size=18),
@@ -988,7 +984,6 @@ sw_boxplot4 <- my_starwars_plt |>
         legend.title = element_text(size = 15),
         panel.border = element_rect(colour = "lightgrey", fill=NA, size=2),
         plot.background = element_rect(colour = "darkgrey", fill=NA, size=2))
-
 ```
 
 ]
