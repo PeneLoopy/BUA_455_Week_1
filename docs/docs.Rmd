@@ -1,55 +1,140 @@
-<!DOCTYPE html>
-<html lang="" xml:lang="">
-  <head>
-    <title>BUA 455 - Week 1</title>
-    <meta charset="utf-8" />
-    <meta name="author" content="Penelope Pooler Eisenbies" />
-    <meta name="date" content="2022-05-13" />
-    <script src="index_files/header-attrs/header-attrs.js"></script>
-    <link href="index_files/panelset/panelset.css" rel="stylesheet" />
-    <script src="index_files/panelset/panelset.js"></script>
-    <link href="index_files/tile-view/tile-view.css" rel="stylesheet" />
-    <script src="index_files/tile-view/tile-view.js"></script>
-    <script src="index_files/xaringanExtra_fit-screen/fit-screen.js"></script>
-    <link href="index_files/tachyons/tachyons.min.css" rel="stylesheet" />
-    <link href="index_files/animate.css/animate.xaringan.css" rel="stylesheet" />
-    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
-  </head>
-  <body>
-    <textarea id="source">
-class: center, middle, inverse, title-slide
+---
+title: "BUA 455 - Week 1"
 
-.title[
-# BUA 455 - Week 1
-]
-.subtitle[
-## R Projects, R Markdown, and R Syntax
-]
-.author[
-### Penelope Pooler Eisenbies
-]
-.date[
-### 2022-05-13
-]
-
+subtitle: "R Projects, R Markdown, and R Syntax"  
+author: "Penelope Pooler Eisenbies"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    seal: true
+    css: xaringan-themer.css
+    nature:
+      slideNumberFormat: "%current%/%total%" 
+      highlightStyle: tomorrow-night-bright
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+      keep_md: true
 ---
 
+```{r setup, include=FALSE, echo=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.retina=2,
+  #out.width = "75%",
+  #out.height = "50%",
+  htmltools.preserve.raw = FALSE,      # needed for windows
+  scipen=100,                          # suppresses scientific notation
+  getSymbols.warning4.0 = FALSE,       # suppresses getSymbols warnings
+  cache = FALSE,
+  echo = TRUE,
+  hiline = TRUE,
+  message = FALSE, 
+  warning = FALSE
+)
 
 
+# install helper package (pacman)
+# pacman loads and installs other packages, if needed
+if (!require("pacman")) install.packages("pacman", repos = "http://lib.stat.cmu.edu/R/CRAN/")
+
+# install and load required packages
+# pacman should be first package in parentheses and then list others
+pacman::p_load(pacman, tidyverse, gridExtra, magrittr)
+
+# verify packages (comment out in finished documents)
+p_loaded()
 
 
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+
+palette <- c(
+  SU_Orange1        = "#F76900",
+  SU_Orange2        = "#FF8E00",
+  SU_Red_Orange     = "#FF431B",
+  SU_Blue1          = "#000E54",
+  SU_Blue2          = "#203299",
+  SU_Light_Blue     = "#2B72D7",
+  SU_White          = "#FFFFFF",
+  SU_Light_Gray     = "#ADB3B8",
+  SU_Medium_Gray    = "#707780",
+  SU_Black          = "#000000", 
+  
+  steel_blue        = "#4682B4",
+  corn_flower_blue  = "#6495ED",
+  deep_sky_blue     = "#00BFFF",
+  dark_magenta      = "#8B008B",
+  medium_orchid     = "#BA55D3",
+  lime_green        = "#32CD32",
+  light_sea_green   = "#20B2AA",
+  chartreuse        = "#7FFF00",
+  orange_red        = "#FF4500",
+  white_smoke       = "#F5F5F5",
+  dark_cyan         = "#008B8B",
+  light_steel_blue  = "#B0C4DE",
+  indigo            = "#4B0082",
+  ivory             = "#FFFFF0",
+  light_slate_grey  = "#778899",
+  linen             = "#FAF0E6",
+  steel_blue        = "#4682B4",
+  blue_violet       = "#8A2BE2",
+  dodger_blue       = "#1E90FF",
+  light_blue        = "#ADD8E6",
+  azure             = "#F0FFFF",
+  lavender          = "#E6E6FA")
+
+primary_color = "#4682B4"                # steel_blue
+secondary_color = "#778899"              # light_slate_grey
+white_color = "#FFFFF0"                  # ivory
+black_color = "#000080"                  # navy
+
+style_duo_accent(
+  primary_color = primary_color,
+  secondary_color = secondary_color,
+  white_color = white_color,
+  black_color = black_color,
+  text_color = black_color,
+  header_color = primary_color,
+  background_color = white_color,
+  code_inline_background_color = "#E6E6FA", # lavender
+  link_color = "#1E90FF",                   # dodger_blue
+  code_inline_color = "#4B0082",            # indigo
+  text_bold_color = "#8B008B",              # dark_magenta
+  header_font_google = google_font("Open Sans"),
+  text_font_google = google_font("Open Sans"),
+  code_font_google = google_font("Source Code Pro"),
+  colors = palette
+)
 
 
+```
 
+```{r xaringan-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
 
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
 
+```{r xaringan-fit-screen, echo=FALSE}
+xaringanExtra::use_fit_screen()
+```
 
+```{r xaringan-tachyons, echo=FALSE}
+xaringanExtra::use_tachyons()
+```
 
+```{r xaringan-animate-css, echo=FALSE}
+xaringanExtra::use_animate_css()
+```
 
-
-
-
-
+```{r xaringan-animate-all, echo=FALSE}
+#xaringanExtra::use_animate_all("slide_up")
+```
 
 ### Course Background
 
@@ -62,7 +147,7 @@ class: center, middle, inverse, title-slide
 
 ### Syllabus
 
-- The **[Syllabus](https://docs.google.com/document/d/1jXKwH_IKJ3CXt5uFWiGGODBrwIjPlXHK/edit?usp=sharing&amp;ouid=105789079702095490344&amp;rtpof=true&amp;sd=true)** is available as a Google Doc link on Blackboard.
+- The **[Syllabus](https://docs.google.com/document/d/1jXKwH_IKJ3CXt5uFWiGGODBrwIjPlXHK/edit?usp=sharing&ouid=105789079702095490344&rtpof=true&sd=true)** is available as a Google Doc link on Blackboard.
 
 - If substantial changes are made, I will post an announcement on Blackboard.
 
@@ -78,11 +163,11 @@ class: middle
 
 - **R/RStudio Resources section** on the Blackboard site for the course includes:
 
-  - **[Tutorial videos](https://blackboard.syracuse.edu/webapps/blackboard/content/listContentEditable.jsp?content_id=_7736517_1&amp;course_id=_463381_1&amp;mode=reset)** (I will add more)
+  - **[Tutorial videos](https://blackboard.syracuse.edu/webapps/blackboard/content/listContentEditable.jsp?content_id=_7736517_1&course_id=_463381_1&mode=reset)** (I will add more)
   - A curated list of **[text resources](https://docs.google.com/document/d/1qdqO7MTq7scYhFydkJuhA7JIUVQNldNXqMBOspXlNZk/edit?usp=sharing)** I have created for BUA 455
   - A curated list of **[video resources](https://docs.google.com/document/d/15y4fVHQA2JKUWy7X188Qn8Ph1V-VtLKsjOhubFv6SuI/edit?usp=sharing)** I have created for BUA 455 
   
-&lt;br&gt;
+<br>
 
 ### HW 1 - Part 1
 
@@ -114,7 +199,7 @@ What is the current version of R (and hopefully the version on your computer) ca
 - Vigorous Calisthenics
 - Shake and Throw
 
-&lt;br&gt;
+<br>
 
 See provided **[tutorial videos]()**, if you need to update your version of R or RStudio.
 
@@ -138,7 +223,7 @@ See provided **[tutorial videos]()**, if you need to update your version of R or
   
   - Create, edit and run R chunks
   
-  &lt;br&gt;
+  <br>
 
 - The [HW 1 - Parts 2 and 3 instructions]() are on blackboard (click on link).. 
 
@@ -192,7 +277,7 @@ See provided **[tutorial videos]()**, if you need to update your version of R or
 
 - Get accustomed to copying and pasting setup chunks from previous work
 
-&lt;br&gt;
+<br>
 
 ***If Header or Setup have errors, the R Markdown file cannot be knit (rendered)***
 
@@ -215,7 +300,7 @@ See provided **[tutorial videos]()**, if you need to update your version of R or
        - create summary tables and plots
        - do analyses (not in BUA 455)
        
-&lt;br&gt;
+<br>
     
 ***Most of BUA 455 is spent working WITHIN R chunks to manage and curate data.***
 
@@ -231,11 +316,11 @@ See provided **[tutorial videos]()**, if you need to update your version of R or
 
 1. Create and name your first R project for your first HW Assignment:
 
-   i. File &gt; New Project &gt; New Directory &gt; New Project 
+   i. File > New Project > New Directory > New Project 
    
    ii. In box, name this project: 
    
-       - **`HW 1 &lt;first name&gt; &lt;last name&gt;`**
+       - **`HW 1 <first name> <last name>`**
     
        - My project would be named 
         
@@ -247,7 +332,7 @@ See provided **[tutorial videos]()**, if you need to update your version of R or
 
 .pull-right[
 
-.middle[![input box for creating a new R project](index_files/images/naming_new_project.png)]
+.middle[![input box for creating a new R project](docs_files/images/naming_new_project.png)]
 
 ]
 
@@ -281,11 +366,11 @@ Your R project, HW 1 should now be open in R.
 
 .pull-right[
 
-![add folder button in RStudio file pane](index_files/images/add_folder.png)
+![add folder button in RStudio file pane](docs_files/images/add_folder.png)
 
-&lt;br&gt;
+<br>
 
-![naming a new folder code_data_output](index_files/images/cdo.png)
+![naming a new folder code_data_output](docs_files/images/cdo.png)
 
 ]
     
@@ -297,7 +382,7 @@ Your R project, HW 1 should now be open in R.
 
 .pull-left[
 
-1. Click File &gt; New File &gt; R Markdown
+1. Click File > New File > R Markdown
 
 2. Specify Title as HW 1
 
@@ -315,7 +400,7 @@ Your R project, HW 1 should now be open in R.
 
 .pull-right[
 
-![R markdown file creation](index_files/images/new_R_Markdown_file.png)
+![R markdown file creation](docs_files/images/new_R_Markdown_file.png)
 
 ]
 
@@ -333,15 +418,15 @@ After completing the previous instructions, you should have
 
 1. Click on this file's tab in the RStudio upper right pane.
 
-2. Click File &gt; Save As 
+2. Click File > Save As 
 
 3. Name this file **`HW1_FirstName_LastName`** (with **NO SPACES** in the name)
 
-    ![saving a Markdown file](index_files/images/markdown_file_name.png)
+    ![saving a Markdown file](docs_files/images/markdown_file_name.png)
 
 4. Make sure it is saved to your code_data_output folder.
 
-5. Click the Knit button to render the Markdown file and examine it.   ![Knit button in RStudio](index_files/images/knit_button.png)
+5. Click the Knit button to render the Markdown file and examine it.   ![Knit button in RStudio](docs_files/images/knit_button.png)
 
 ---
 
@@ -366,7 +451,7 @@ After completing the previous instructions, you should have
       
       - In this class, we want to see the R code.
       
-2. Run this chunk by clicking green triangle: ![green R chunk triangle](index_files/images/rmd_chunk1_buttons.png)
+2. Run this chunk by clicking green triangle: ![green R chunk triangle](docs_files/images/rmd_chunk1_buttons.png)
       
 2. Verify that you have all of the packages listed.
 
@@ -376,8 +461,7 @@ After completing the previous instructions, you should have
 
 .panel[.panel-name[R code for setup chunk]
 
-
-```r
+```{r setup code for HW 1, eval=F}
 # options for all chunks
 knitr::opts_chunk$set(echo = TRUE, highlight = TRUE, scipen=100)
 
@@ -395,8 +479,8 @@ p_loaded()
 
 - You should see 12 packages listed:
 
-&gt; [1] "magrittr"  "gridExtra" "forcats"   "stringr"   "dplyr"     "purrr"    
-&gt; [7] "readr"     "tidyr"     "tibble"    "ggplot2"   "tidyverse" "pacman"  
+> [1] "magrittr"  "gridExtra" "forcats"   "stringr"   "dplyr"     "purrr"    
+> [7] "readr"     "tidyr"     "tibble"    "ggplot2"   "tidyverse" "pacman"  
 
 - If some packages are missing: **make sure you have latest version of R and RStudio**
 - If your software is up to date, then come to Zoom clinic this Friday.
@@ -415,7 +499,7 @@ p_loaded()
 
 1. Click Outline button in upper right corner of pane: 
 
-   ![Markdown outline button](index_files/images/outline_button.png)
+   ![Markdown outline button](docs_files/images/outline_button.png)
    
    - Outline appears and you click to navigate.
    
@@ -423,7 +507,7 @@ p_loaded()
 
 2. Click navigation bar at bottom: 
 
-   ![R markdown bottom navigation bar](index_files/images/rmd_bottom_nav_bar.png)
+   ![R markdown bottom navigation bar](docs_files/images/rmd_bottom_nav_bar.png)
 
    - Chunk numbers and Names are Shown
    
@@ -464,17 +548,17 @@ p_loaded()
    - True for BOTH R datasets and external datasets that you import.
 
 
-- R code shown demonstrates how to use a pipe operator, `|&gt;`
+- R code shown demonstrates how to use a pipe operator, `|>`
 
   - Piping makes data management coding much more fluid and efficient.
   
   - This course will usually show code with piping 
   
-  - Older version of pipe operator is `%&gt;%` 
-     - You may see `%&gt;%` or `|&gt;` in documentation.
-     -  `|&gt;` and `%&gt;%` are interchangeable.
+  - Older version of pipe operator is `%>%` 
+     - You may see `%>%` or `|>` in documentation.
+     -  `|>` and `%>%` are interchangeable.
      
-  - **If code is correct but you get an error message when you use `|&gt;`:**
+  - **If code is correct but you get an error message when you use `|>`:**
          - You need to update your version of R or RStudio.
     
 - `glimpse` is used to examine the saved dataset
@@ -489,32 +573,16 @@ p_loaded()
 
 - R code below shows the glimpse command used without piping and then with piping.
 
-
-```r
+```{r save and examine cars dataset}
 # save intermal R dataset to Global Environment with different name
-my_cars &lt;- cars
+my_cars <- cars
 
 # examine dataset using glimpse (without piping)
 glimpse(my_cars)
-```
 
-```
-## Rows: 50
-## Columns: 2
-## $ speed &lt;dbl&gt; 4, 4, 7, 7, 8, 9, 10, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13…
-## $ dist  &lt;dbl&gt; 2, 10, 4, 22, 16, 10, 18, 26, 34, 17, 28, 14, 20, 24, 28, 26, 34…
-```
-
-```r
 # examine dataset using glimpse (with piping)
-my_cars |&gt; glimpse()
-```
+my_cars |> glimpse()
 
-```
-## Rows: 50
-## Columns: 2
-## $ speed &lt;dbl&gt; 4, 4, 7, 7, 8, 9, 10, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13…
-## $ dist  &lt;dbl&gt; 2, 10, 4, 22, 16, 10, 18, 26, 34, 17, 28, 14, 20, 24, 28, 26, 34…
 ```
 
 ---
@@ -529,7 +597,7 @@ class: middle
 
 The `cars` dataset is a dataset that is internal to the R software.  The code above saves a **copy** of this dataset with a new name.
 
-&lt;br&gt;
+<br>
 
 * Where is this copy dataset saved?
 
@@ -581,27 +649,14 @@ The `my_cars` dataset, which is a saved copy of the R dataset, `cars` has
   - Values **BEFORE the comma** in the square bracket specify row(s).
   - Values **AFTER the comma** in the square bracket specify column(s).
 
+```{r selecting rows cols}
 
-```r
 # select rows 3, 4 and 5 only:
 my_cars[3:5,]
-```
 
-```
-##   speed dist
-## 3     7    4
-## 4     7   22
-## 5     8   16
-```
-
-```r
 # select column 1 only:
 my_cars[,1]
-```
 
-```
-##  [1]  4  4  7  7  8  9 10 10 10 11 11 12 12 12 12 13 13 13 13 14 14 14 14 15 15
-## [26] 15 16 16 17 17 17 18 18 18 18 19 19 19 20 20 20 20 20 22 23 24 24 24 24 25
 ```
 
 ---
@@ -610,23 +665,14 @@ class: middle
 
 ### Selecting Observations by **BOTH** Row and Column
 
+```{r selecting observations by row and col}
 
-```r
 # select observations 10, 11, and 12 within column 1:
 my_cars[10:12, 1]
-```
 
-```
-## [1] 11 11 12
-```
-
-```r
 # select observations 20, 30, and 40, within column 2:
 my_cars[c(20,30,40),2]
-```
 
-```
-## [1] 26 40 48
 ```
 
 ---
@@ -641,7 +687,7 @@ my_cars[c(20,30,40),2]
 
   - Rows 10, 15, and 20 of column 1 of the `my_cars` dataset.
   
-&lt;BR&gt;
+<BR>
 
 **RECALL:**
 
@@ -686,30 +732,10 @@ my_cars[c(20,30,40),2]
 - The `starwars` dataset has both numeric and character variables.
 - In the chunk below we will save the R dataset, `starwars` to our Global Environment as `my_starwars`.
 
-
-```r
+```{r examining the starwars data}
 # save and examine starwars data 
-my_starwars &lt;- starwars
+my_starwars <- starwars
 glimpse(my_starwars)
-```
-
-```
-## Rows: 87
-## Columns: 14
-## $ name       &lt;chr&gt; "Luke Skywalker", "C-3PO", "R2-D2", "Darth Vader", "Leia Or…
-## $ height     &lt;int&gt; 172, 167, 96, 202, 150, 178, 165, 97, 183, 182, 188, 180, 2…
-## $ mass       &lt;dbl&gt; 77.0, 75.0, 32.0, 136.0, 49.0, 120.0, 75.0, 32.0, 84.0, 77.…
-## $ hair_color &lt;chr&gt; "blond", NA, NA, "none", "brown", "brown, grey", "brown", N…
-## $ skin_color &lt;chr&gt; "fair", "gold", "white, blue", "white", "light", "light", "…
-## $ eye_color  &lt;chr&gt; "blue", "yellow", "red", "yellow", "brown", "blue", "blue",…
-## $ birth_year &lt;dbl&gt; 19.0, 112.0, 33.0, 41.9, 19.0, 52.0, 47.0, NA, 24.0, 57.0, …
-## $ sex        &lt;chr&gt; "male", "none", "none", "male", "female", "male", "female",…
-## $ gender     &lt;chr&gt; "masculine", "masculine", "masculine", "masculine", "femini…
-## $ homeworld  &lt;chr&gt; "Tatooine", "Tatooine", "Naboo", "Tatooine", "Alderaan", "T…
-## $ species    &lt;chr&gt; "Human", "Droid", "Droid", "Human", "Human", "Human", "Huma…
-## $ films      &lt;list&gt; &lt;"The Empire Strikes Back", "Revenge of the Sith", "Return…
-## $ vehicles   &lt;list&gt; &lt;"Snowspeeder", "Imperial Speeder Bike"&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;, "Imp…
-## $ starships  &lt;list&gt; &lt;"X-wing", "Imperial shuttle"&gt;, &lt;&gt;, &lt;&gt;, "TIE Advanced x1",…
 ```
 
 ---
@@ -720,30 +746,16 @@ glimpse(my_starwars)
  
 - To indicate a variable WITHIN a dataset we use `$`, the accessor operator
 
-
-```r
+```{r using unique to look at variable categories}
 # examine the list of species
 unique(my_starwars$species)
 ```
 
-```
-##  [1] "Human"          "Droid"          "Wookiee"        "Rodian"        
-##  [5] "Hutt"           "Yoda's species" "Trandoshan"     "Mon Calamari"  
-##  [9] "Ewok"           "Sullustan"      "Neimodian"      "Gungan"        
-## [13] NA               "Toydarian"      "Dug"            "Zabrak"        
-## [17] "Twi'lek"        "Vulptereen"     "Xexto"          "Toong"         
-## [21] "Cerean"         "Nautolan"       "Tholothian"     "Iktotchi"      
-## [25] "Quermian"       "Kel Dor"        "Chagrian"       "Geonosian"     
-## [29] "Mirialan"       "Clawdite"       "Besalisk"       "Kaminoan"      
-## [33] "Aleena"         "Skakoan"        "Muun"           "Togruta"       
-## [37] "Kaleesh"        "Pau'an"
-```
-
-
-```r
+```{r unique code with piping, eval=FALSE}
 # same task with piping uses select command:
-my_starwars |&gt;
-  select(species) |&gt; unique()
+my_starwars |>
+  select(species) |> unique()
+
 ```
 
 ---
@@ -754,27 +766,17 @@ my_starwars |&gt;
 
   - Very useful when making data management decisions
 
-
-```r
+```{r using table to summarize 1 variable by category}
 # using $ to specify hair_color in my_starwars dataset
 table(my_starwars$hair_color)
-```
 
 ```
-## 
-##        auburn  auburn, grey auburn, white         black         blond 
-##             1             1             1            13             3 
-##        blonde         brown   brown, grey          grey          none 
-##             1            18             1             1            37 
-##       unknown         white 
-##             1             4
-```
 
-
-```r
+```{r using table with piping, eval=FALSE}
 # using piping to select variable
-my_starwars |&gt;
-  select(hair_color) |&gt;table()
+my_starwars |>
+  select(hair_color) |>table()
+
 ```
 
 ---
@@ -782,35 +784,18 @@ my_starwars |&gt;
 ### Using `table` to Examine Two Variables
 
 - Second command saves summary to Global Environment and prints it to screen.
-  - **To save an object:** assign it to a name with `&lt;-`
+  - **To save an object:** assign it to a name with `<-`
   - **To print an object to the screen as you save it:** enclose it in parentheses.
   - Objects can be values, vectors, datasets, plots, tables, etc.
   
-
-```r
+```{r using table to summarize 2 vars, eval=F}
 # using $ to specify variables in a dataset
 table(my_starwars$sex, my_starwars$hair_color)
 ```
 
-
-```r
+```{r using table for 2 vars with piping and saving result}
 # using piping to select variables; results is saved and printed
-(sex_hclr_smry &lt;- my_starwars |&gt; select(sex, hair_color) |&gt;table())
-```
-
-```
-##                 hair_color
-## sex              auburn auburn, grey auburn, white black blond blonde brown
-##   female              1            0             0     3     0      1     6
-##   hermaphroditic      0            0             0     0     0      0     0
-##   male                0            1             1     9     3      0    11
-##   none                0            0             0     0     0      0     0
-##                 hair_color
-## sex              brown, grey grey none unknown white
-##   female                   0    0    4       0     1
-##   hermaphroditic           0    0    0       0     0
-##   male                     1    1   29       0     3
-##   none                     0    0    3       0     0
+(sex_hclr_smry <- my_starwars |> select(sex, hair_color) |>table())
 ```
 
 ---
@@ -819,31 +804,14 @@ table(my_starwars$sex, my_starwars$hair_color)
 
 - `summary` and `mean` are two quick ways to summarize numeric variables.
 
-
-```r
+```{r using summary and mean}
 # summarize height of starwars characters (with piping)
-my_starwars |&gt; select(height) |&gt; summary()
-```
+my_starwars |> select(height) |> summary()
 
-```
-##      height     
-##  Min.   : 66.0  
-##  1st Qu.:167.0  
-##  Median :180.0  
-##  Mean   :174.4  
-##  3rd Qu.:191.0  
-##  Max.   :264.0  
-##  NA's   :6
-```
-
-```r
 # calculate the mean (without piping)
 # na.rm=T is required to remove missing obs before calculation
 mean(my_starwars$height, na.rm=T)
-```
 
-```
-## [1] 174.358
 ```
 
 ---
@@ -856,13 +824,13 @@ mean(my_starwars$height, na.rm=T)
 
 The output from the `glimpse(my_starwars)` command lists each variable and shows its type.
 
-- This dataset has `____` character variables (labeled `&lt;chr&gt;`).
+- This dataset has `____` character variables (labeled `<chr>`).
 
 - This dataset has `____` numeric variables.
 
-  - **RECALL:** Numeric variables include both decimal (`&lt;dbl&gt;`) AND integer (`&lt;int&gt;`) variables.
+  - **RECALL:** Numeric variables include both decimal (`<dbl>`) AND integer (`<int>`) variables.
   
-&lt;br&gt;
+<br>
 
 **NOTE:** The `glimpse` command is a newer alternative to `str` and will only work if the `tidyverse` package suite is installed and loaded.
 
@@ -875,7 +843,7 @@ The output from the `glimpse(my_starwars)` command lists each variable and shows
 
 ***"The greatest value of a picture is when it forces us to notice what we never expected to see.”*** *-John W. Tukey* 
 
-&lt;br&gt;
+<br>
 
 #### Data Mgmt for a Basic Boxplot
 
@@ -887,7 +855,7 @@ The output from the `glimpse(my_starwars)` command lists each variable and shows
    
 - The very first plot is the bare minimum to create a boxplot.
 
-&lt;br&gt;
+<br>
 
 .center[***To save a plot AND print it to the screen, enclose all code in parentheses.***]
 
@@ -899,19 +867,19 @@ The output from the `glimpse(my_starwars)` command lists each variable and shows
 
 Code shows data management for a plot with comments
 
-
-```r
+```{r starwars_data_mgmt}
 # dataset my_starwars_plt is created for the plot
 # used select command to select variables
 # used filter command to filter data to only to species, Humans and Droid
 # used mutate command to create new variable bmi
   # bmi = weight(kg)/height(m)^2
 # filtered out observations where bmi was a missing value, NA
-my_starwars_plt &lt;- my_starwars |&gt;
-  select(species, sex, height, mass) |&gt;
-  filter(species %in% c("Human", "Droid")) |&gt;
-  mutate(bmi = mass/((height/100))^2) |&gt;
+my_starwars_plt <- my_starwars |>
+  select(species, sex, height, mass) |>
+  filter(species %in% c("Human", "Droid")) |>
+  mutate(bmi = mass/((height/100))^2) |>
   filter(!is.na(bmi)) 
+
 ```
 
 ]
@@ -922,28 +890,10 @@ my_starwars_plt &lt;- my_starwars |&gt;
 
 #### Original data
 
+```{r original dataset}
 
-```r
-my_starwars |&gt; glimpse(width=40)
-```
+my_starwars |> glimpse(width=40)
 
-```
-## Rows: 87
-## Columns: 14
-## $ name       &lt;chr&gt; "Luke Skywalker", "…
-## $ height     &lt;int&gt; 172, 167, 96, 202, …
-## $ mass       &lt;dbl&gt; 77, 75, 32, 136, 49…
-## $ hair_color &lt;chr&gt; "blond", NA, NA, "n…
-## $ skin_color &lt;chr&gt; "fair", "gold", "wh…
-## $ eye_color  &lt;chr&gt; "blue", "yellow", "…
-## $ birth_year &lt;dbl&gt; 19.0, 112.0, 33.0, …
-## $ sex        &lt;chr&gt; "male", "none", "no…
-## $ gender     &lt;chr&gt; "masculine", "mascu…
-## $ homeworld  &lt;chr&gt; "Tatooine", "Tatooi…
-## $ species    &lt;chr&gt; "Human", "Droid", "…
-## $ films      &lt;list&gt; &lt;"The Empire Strik…
-## $ vehicles   &lt;list&gt; &lt;"Snowspeeder", "I…
-## $ starships  &lt;list&gt; &lt;"X-wing", "Imperi…
 ```
 
 ]
@@ -952,19 +902,10 @@ my_starwars |&gt; glimpse(width=40)
 
 #### Modified data
 
+```{r modified dataset}
 
-```r
-my_starwars_plt |&gt; glimpse(width=40)
-```
+my_starwars_plt |> glimpse(width=40)
 
-```
-## Rows: 26
-## Columns: 5
-## $ species &lt;chr&gt; "Human", "Droid", "Dro…
-## $ sex     &lt;chr&gt; "male", "none", "none"…
-## $ height  &lt;int&gt; 172, 167, 96, 202, 150…
-## $ mass    &lt;dbl&gt; 77, 75, 32, 136, 49, 1…
-## $ bmi     &lt;dbl&gt; 26.02758, 26.89232, 34…
 ```
 
 ]
@@ -973,14 +914,11 @@ my_starwars_plt |&gt; glimpse(width=40)
 
 .panel[.panel-name[**Unformatted Plot**]
 
-
-```r
-my_starwars_plt |&gt; 
+```{r unformatted boxplot, fig.width=8, fig.height=6, fig.align='center'}
+my_starwars_plt |> 
   ggplot() +
   geom_boxplot(aes(x=species, y=bmi))
 ```
-
-&lt;img src="index_files/figure-html/unformatted boxplot-1.png" width="576" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -991,55 +929,45 @@ my_starwars_plt |&gt;
 
 .panel[.panel-name[**Saved Unformatted Plot**]
 
-
-```r
-(sw_boxplot1 &lt;- my_starwars_plt |&gt; 
+```{r unformatted saved boxplot, fig.width=8, fig.height=6, fig.align='center'}
+(sw_boxplot1 <- my_starwars_plt |> 
   ggplot() +
   geom_boxplot(aes(x=species, y=bmi)))
 ```
-
-&lt;img src="index_files/figure-html/unformatted saved boxplot-1.png" width="576" style="display: block; margin: auto;" /&gt;
 
 ]
 
 .panel[.panel-name[**`fill` option**]
 
-
-```r
-(sw_boxplot2 &lt;- my_starwars_plt |&gt; 
+```{r saved boxplot with fill, fig.width=8, fig.height=6, fig.align='center'}
+(sw_boxplot2 <- my_starwars_plt |> 
   ggplot() +
   geom_boxplot(aes(x=species, y=bmi, fill=sex)))
 ```
-
-&lt;img src="index_files/figure-html/saved boxplot with fill-1.png" width="576" style="display: block; margin: auto;" /&gt;
 
 ]
 
 .panel[.panel-name[**format background**]
 
-
-```r
-(sw_boxplot3 &lt;- my_starwars_plt |&gt; 
+```{r saved boxplot with fill and theme,  fig.width=8, fig.height=6, fig.align='center'}
+(sw_boxplot3 <- my_starwars_plt |> 
   ggplot() +
   geom_boxplot(aes(x=species, y=bmi, fill=sex))+ theme_classic())
 ```
-
-&lt;img src="index_files/figure-html/saved boxplot with fill and theme-1.png" width="576" style="display: block; margin: auto;" /&gt;
 
 ]
 
 .panel[.panel-name[**R code - Final Plot**]
 
-
-```r
+```{r code for final plot}
 # created a factor variable sexF to modify order (levels) for plot
-my_starwars_plt &lt;- my_starwars_plt |&gt;
+my_starwars_plt <- my_starwars_plt |>
   mutate(sexF = factor(sex, 
                        levels = c("male", "female", "none"),
                        labels =c("Male", "Female", "None")))
 
 # formatted plot with factor variable, text formatted, and borders
-sw_boxplot4 &lt;- my_starwars_plt |&gt; 
+sw_boxplot4 <- my_starwars_plt |>
   ggplot() +
   geom_boxplot(aes(x=species, y=bmi, fill=sexF)) + 
   theme_classic() + 
@@ -1064,7 +992,10 @@ sw_boxplot4 &lt;- my_starwars_plt |&gt;
 
 .center[
 
-&lt;img src="index_files/figure-html/final plot-1.png" width="648" style="display: block; margin: auto;" /&gt;
+```{r final plot, echo=F,  fig.width=9, fig.height=7, fig.align='center'}
+sw_boxplot4
+
+```
 
 ]
 
@@ -1074,142 +1005,3 @@ sw_boxplot4 &lt;- my_starwars_plt |&gt;
 
 ]
 
-    </textarea>
-<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
-<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-<script>var slideshow = remark.create({
-"slideNumberFormat": "%current%/%total%",
-"highlightStyle": "tomorrow-night-bright",
-"highlightLines": true,
-"ratio": "16:9",
-"countIncrementalSlides": true,
-"keep_md": true
-});
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
-  window.dispatchEvent(new Event('resize'));
-});
-(function(d) {
-  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
-  if (!r) return;
-  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
-  d.head.appendChild(s);
-})(document);
-
-(function(d) {
-  var el = d.getElementsByClassName("remark-slides-area");
-  if (!el) return;
-  var slide, slides = slideshow.getSlides(), els = el[0].children;
-  for (var i = 1; i < slides.length; i++) {
-    slide = slides[i];
-    if (slide.properties.continued === "true" || slide.properties.count === "false") {
-      els[i - 1].className += ' has-continuation';
-    }
-  }
-  var s = d.createElement("style");
-  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
-  d.head.appendChild(s);
-})(document);
-// delete the temporary CSS (for displaying all slides initially) when the user
-// starts to view slides
-(function() {
-  var deleted = false;
-  slideshow.on('beforeShowSlide', function(slide) {
-    if (deleted) return;
-    var sheets = document.styleSheets, node;
-    for (var i = 0; i < sheets.length; i++) {
-      node = sheets[i].ownerNode;
-      if (node.dataset["target"] !== "print-only") continue;
-      node.parentNode.removeChild(node);
-    }
-    deleted = true;
-  });
-})();
-// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
-// screen reader (see PR #262)
-(function(d) {
-  let res = {};
-  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
-    const t = tr.querySelector('td:nth-child(2)').innerText;
-    tr.querySelectorAll('td:first-child .key').forEach(key => {
-      const k = key.innerText;
-      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
-    });
-  });
-  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
-})(document);
-(function() {
-  "use strict"
-  // Replace <script> tags in slides area to make them executable
-  var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container script'
-  );
-  if (!scripts.length) return;
-  for (var i = 0; i < scripts.length; i++) {
-    var s = document.createElement('script');
-    var code = document.createTextNode(scripts[i].textContent);
-    s.appendChild(code);
-    var scriptAttrs = scripts[i].attributes;
-    for (var j = 0; j < scriptAttrs.length; j++) {
-      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
-    }
-    scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-})();
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-// adds .remark-code-has-line-highlighted class to <pre> parent elements
-// of code chunks containing highlighted lines with class .remark-code-line-highlighted
-(function(d) {
-  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
-  const preParents = [];
-  const findPreParent = function(line, p = 0) {
-    if (p > 1) return null; // traverse up no further than grandparent
-    const el = line.parentElement;
-    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
-  };
-
-  for (let line of hlines) {
-    let pre = findPreParent(line);
-    if (pre && !preParents.includes(pre)) preParents.push(pre);
-  }
-  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
-})(document);</script>
-
-<script>
-slideshow._releaseMath = function(el) {
-  var i, text, code, codes = el.getElementsByTagName('code');
-  for (i = 0; i < codes.length;) {
-    code = codes[i];
-    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
-      text = code.textContent;
-      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
-          /^\$\$(.|\s)+\$\$$/.test(text) ||
-          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
-        code.outerHTML = code.innerHTML;  // remove <code></code>
-        continue;
-      }
-    }
-    i++;
-  }
-};
-slideshow._releaseMath(document);
-</script>
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-(function () {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
-  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
-    script.src  = script.src.replace(/^https?:/, '');
-  document.getElementsByTagName('head')[0].appendChild(script);
-})();
-</script>
-  </body>
-</html>
