@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>BUA 455 - Week 1</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Penelope Pooler Eisenbies" />
+    <meta name="date" content="2022-05-13" />
+    <script src="docs_files/header-attrs/header-attrs.js"></script>
+    <link href="docs_files/panelset/panelset.css" rel="stylesheet" />
+    <script src="docs_files/panelset/panelset.js"></script>
+    <link href="docs_files/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="docs_files/tile-view/tile-view.js"></script>
+    <script src="docs_files/xaringanExtra_fit-screen/fit-screen.js"></script>
+    <link href="docs_files/tachyons/tachyons.min.css" rel="stylesheet" />
+    <link href="docs_files/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# BUA 455 - Week 1
+]
+.subtitle[
+## R Projects, R Markdown, and R Syntax
+]
+.author[
+### Penelope Pooler Eisenbies
+]
+.date[
+### 2022-05-13
+]
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Course Background
+
+
+#### REQUIRED Pre-class Information
+
+- If you haven't already read through the **[Pre-class Information](add google link)**, please do.
+
+---
+
+### Syllabus
+
+- The **[Syllabus](https://docs.google.com/document/d/1jXKwH_IKJ3CXt5uFWiGGODBrwIjPlXHK/edit?usp=sharing&amp;ouid=105789079702095490344&amp;rtpof=true&amp;sd=true)** is available as a Google Doc link on Blackboard.
+
+- If substantial changes are made, I will post an announcement on Blackboard.
+
+---
+
+class: middle
+
+### Information about R and R Studio
+
+- Pre-class Information Videos are available in Kaltura Channel for this course: **[BUA 455 - Spring 2022](https://video.syr.edu/channel/BUA%2B455%2B-%2BSpring%2B2022/243108882)**
+ 
+- Additional Resources: textbook sections and Linkedin Learning videos in **[Pre-class Information](https://rpubs.com/PeneLope_PE/857533)**.
+
+- **R/RStudio Resources section** on the Blackboard site for the course includes:
+
+  - **[Tutorial videos](https://blackboard.syracuse.edu/webapps/blackboard/content/listContentEditable.jsp?content_id=_7736517_1&amp;course_id=_463381_1&amp;mode=reset)** (I will add more)
+  - A curated list of **[text resources](https://docs.google.com/document/d/1qdqO7MTq7scYhFydkJuhA7JIUVQNldNXqMBOspXlNZk/edit?usp=sharing)** I have created for BUA 455
+  - A curated list of **[video resources](https://docs.google.com/document/d/15y4fVHQA2JKUWy7X188Qn8Ph1V-VtLKsjOhubFv6SuI/edit?usp=sharing)** I have created for BUA 455 
+  
+&lt;br&gt;
+
+### HW 1 - Part 1
+
+**This Blackboard Assignment counts as 20% of HW 1.**
+
+- It includes six questions about:
+  - Some course policies from the syllabus
+  - The hardware requirements for this course (not negotiable)
+  - The current version of R and RStudio
+
+---
+
+class: middle
+
+### Wk 1 In-class Exercises (TP L1 - Q1)
+
+***TurningPoint Session ID: bua455s22***
+
+**This is also Question 6 of HW 1 - Part 1**
+
+Each version of R is given a unique name to differentiate them. 
+
+What is the current version of R (and hopefully the version on your computer) called?
+
+- Kick Things
+- Camp Pontanezen
+- One Push-up
+- Bird Hippie
+- Vigorous Calisthenics
+- Shake and Throw
+
+&lt;br&gt;
+
+See provided **[tutorial videos]()**, if you need to update your version of R or RStudio.
+
+***NOTE: R updates to a new version two or three times a year. When a new version is available, you should delete the old version and download and install the new version of R as soon as possilbe.***
+
+---
+
+### HW 1 - Parts 2 and 3
+
+- Will be introduced today and covered in depth on Thursday
+
+- We will work through the steps to
+
+  - Create an R Project
+  
+  - Create a code_data_output folder
+  
+  - Create and save an R Markdown file
+  
+  - Modify the R Markdown file header and setup chunk
+  
+  - Create, edit and run R chunks
+  
+  &lt;br&gt;
+
+- The [HW 1 - Parts 2 and 3 instructions]() are on blackboard (click on link).. 
+
+---
+
+### R Project Anatomy for BUA 455
+
+- All Lectures, Assignments and student project work will be contained in R project directories
+
+- Project structure can be complex
+
+- In this course, we will keep it simple
+
+#### Outer Project Folder contains:
+
+- **.Rproj** file
+
+  - This file is required and makes the folder an R project.
+  
+  - You can click on this file to open RStudio, and the Project
+  
+- **README.txt** file
+
+  - document of all files in the R project
+  
+- **code_data_output** folder contains:
+
+   - R files such as R Markdown files, R Scripts
+   - input data (.csv) files and image files
+   - output documents, summary tables, plots
+
+
+---
+
+### Basic Anatomy of R Markdown Files (.Rmd)
+
+#### Header
+
+- Created by RStudio 
+
+- User specifies type of output and RStudop creates header
+  - HTML Notebook (NB), HTML, HTML Dashboard, Word, Powerpoint
+  
+- Can (and should) be modified but use care
+
+#### Setup Chunk
+
+- Specifies document options
+
+- installs and load packages
+
+- Get accustomed to copying and pasting setup chunks from previous work
+
+&lt;br&gt;
+
+***If Header or Setup have errors, the R Markdown file cannot be knit (rendered)***
+
+---
+
+### Basic Anatomy of R Markdown Files (.Rmd)
+
+#### Document Body
+
+- Text 
+  - Can be formatted using simple Markdown language conventions
+  - Very minimal formatting will be required in this course (for dashboards)
+  
+- R Chunks
+    - Created by clicking green C or Ctrl+Alt+i (Mac users use Cmd)
+    - Have a header to specify options for that chunk
+    - Contain R code to: 
+       - import and wrangle data
+       - reshape and summarize data
+       - create summary tables and plots
+       - do analyses (not in BUA 455)
+       
+&lt;br&gt;
+    
+***Most of BUA 455 is spent working WITHIN R chunks to manage and curate data.***
+
+---
+
+### Creating a New Project for HW 1
+
+.pull-left[
+
+0. Create a BUA455 folder on your computer, NOT in Downloads.
+  - ALL work for this class will be saved to this folder 
+  - My folder is named: **`00_BUA_455_All`**
+
+1. Create and name your first R project for your first HW Assignment:
+
+   i. File &gt; New Project &gt; New Directory &gt; New Project 
+   
+   ii. In box, name this project: 
+   
+       - **`HW 1 &lt;first name&gt; &lt;last name&gt;`**
+    
+       - My project would be named 
+        
+           **`HW 1 Penelope Pooler`**
+    
+   iii. Click Create Project
+   
+]
+
+.pull-right[
+
+.middle[![input box for creating a new R project](docs_files/images/naming_new_project.png)]
+
+]
+
+
+---
+
+### Adding a code_data_output folder
+
+Your R project, HW 1 should now be open in R.
+
+- You can check this by clicking on Files tab in lower-right pane of RStudio
+
+.pull-left[
+
+#### Adding a code_data_output folder
+
+1. With Files tab open, click folder with green plus sign to add a folder to your project
+
+2. Name the new folder **`code_data_output`** (all lower case with no spaces)
+
+   - In BUA 455 we will use this simple file structure for all assignments, lectures, etc.
+   
+3. Click OK to create new folder
+
+4. Verify that new folder is appears in Files window then close RStudio.
+
+5. Reopen the project by clicking on .Rproj file in the R project directory.
+
+]
+
+
+.pull-right[
+
+![add folder button in RStudio file pane](docs_files/images/add_folder.png)
+
+&lt;br&gt;
+
+![naming a new folder code_data_output](docs_files/images/cdo.png)
+
+]
+    
+---
+
+### Creating an R Markdown file
+
+**With your HW 1 R project open:**
+
+.pull-left[
+
+1. Click File &gt; New File &gt; R Markdown
+
+2. Specify Title as HW 1
+
+3. Author should be your name
+
+4. Notice that instead of just a date, I have entered the due date for HW 1.
+
+   - Any quoted text can be added.
+   
+5. Click OK.
+
+   - Notice that this opens an **UN-SAVED** file labeled `Untitled1`.
+   
+]
+
+.pull-right[
+
+![R markdown file creation](docs_files/images/new_R_Markdown_file.png)
+
+]
+
+---
+
+### Saving and Knitting an R Markdown file
+
+After completing the previous instructions, you should have 
+
+- an open HW 1 R project with your name
+- a code_data_output folder within the project
+- An open unsaved R Markdown file
+
+#### Saving an R Markdown file to your project.
+
+1. Click on this file's tab in the RStudio upper right pane.
+
+2. Click File &gt; Save As 
+
+3. Name this file **`HW1_FirstName_LastName`** (with **NO SPACES** in the name)
+
+    ![saving a Markdown file](docs_files/images/markdown_file_name.png)
+
+4. Make sure it is saved to your code_data_output folder.
+
+5. Click the Knit button to render the Markdown file and examine it.   ![Knit button in RStudio](docs_files/images/knit_button.png)
+
+---
+
+.panelset[
+
+.panel[.panel-name[Edit the `setup` R Chunk (Chunk 1)]
+
+- Text can be written and edited between chunks.
+
+- R code can be written and edited within chunks.
+
+- R chunks can be run individually or altogether. 
+
+#### Edit the setup chunk
+
+1. Replace the R code in the setup chunk in your file with the R code provided.
+
+   - In the default setup, the option is `include=FALSE`.
+   
+   - Change this to `include=TRUE` so that your setup chunk will appear in the document if you knit it.
+      - In finished documents for a non-technical audience, no (or minimal) R code appears.
+      
+      - In this class, we want to see the R code.
+      
+2. Run this chunk by clicking green triangle: ![green R chunk triangle](docs_files/images/rmd_chunk1_buttons.png)
+      
+2. Verify that you have all of the packages listed.
+
+***You cannot complete this course if your software is not working properly.***
+      
+]
+
+.panel[.panel-name[R code for setup chunk]
+
+
+```r
+# options for all chunks
+knitr::opts_chunk$set(echo = TRUE, highlight = TRUE, scipen=100)
+
+# install helper package (pacman) to install and load other packages
+if (!require("pacman")) install.packages("pacman", repos = "http://lib.stat.cmu.edu/R/CRAN/")
+
+# install and load required packages including pacman first
+pacman::p_load(pacman, tidyverse, gridExtra, magrittr)
+
+# verify packages (comment out in finished documents)
+p_loaded()
+```
+
+#### Output from `p_loaded()` command.
+
+- You should see 12 packages listed:
+
+&gt; [1] "magrittr"  "gridExtra" "forcats"   "stringr"   "dplyr"     "purrr"    
+&gt; [7] "readr"     "tidyr"     "tibble"    "ggplot2"   "tidyverse" "pacman"  
+
+- If some packages are missing: **make sure you have latest version of R and RStudio**
+- If your software is up to date, then come to Zoom clinic this Friday.
+
+***You cannot complete this course if your software is not working properly.***
+
+]
+
+]
+
+---
+
+### Navigating an R Markdown File
+
+#### Using the Outline and Navigation Bar
+
+1. Click Outline button in upper right corner of pane: 
+
+   ![Markdown outline button](docs_files/images/outline_button.png)
+   
+   - Outline appears and you click to navigate.
+   
+   - Click Outline button again to hide Outline
+
+2. Click navigation bar at bottom: 
+
+   ![R markdown bottom navigation bar](docs_files/images/rmd_bottom_nav_bar.png)
+
+   - Chunk numbers and Names are Shown
+   
+   - Menu is minimized when you type.
+   
+---
+
+### More about R Chunks and Running R Code
+
+- **Create a new R chunk:** 
+
+   - Click green C or type `Ctrl+Alt+i` (Mac users use Cmd)
+   
+- **Run a whole R chunk:**
+
+   - Click green triangle or type `Ctrl+Shift_Enter` (Mac users use Cmd)
+  
+- **Run all previous chunks;**
+
+   - Click **GREY** down triangle
+   
+- **Run a line or continuous section of R code:**
+
+   - Place cursor in line and click `Ctrl+Enter` (Mac users use Cmd)
+   
+- **Run multiple lines of R code that are not connected:**
+
+   - Select all R code to be run and click `Ctrl+Enter` (Mac users use Cmd)
+   
+---
+
+### Saving and Examining R Datasets
+
+-  The following R chunk uses the `cars` data (An internal R dataset) 
+
+-  R code shown saves the R dataset, `cars` to the Global Environment  
+   - Saving data to the Global Environment is first step.
+   - True for BOTH R datasets and external datasets that you import.
+
+
+- R code shown demonstrates how to use a pipe operator, `|&gt;`
+
+  - Piping makes data management coding much more fluid and efficient.
+  
+  - This course will usually show code with piping 
+  
+  - Older version of pipe operator is `%&gt;%` 
+     - You may see `%&gt;%` or `|&gt;` in documentation.
+     -  `|&gt;` and `%&gt;%` are interchangeable.
+     
+  - **If code is correct but you get an error message when you use `|&gt;`:**
+         - You need to update your version of R or RStudio.
+    
+- `glimpse` is used to examine the saved dataset
+
+---
+
+### Saving and Examining R Datasets
+
+- `my_cars` is the name assigned to the `cars` dataset in the Global Environment.
+  
+- `glimpse` is used to examine the dataset.
+
+- R code below shows the glimpse command used without piping and then with piping.
+
+
+```r
+# save intermal R dataset to Global Environment with different name
+my_cars &lt;- cars
+
+# examine dataset using glimpse (without piping)
+glimpse(my_cars)
+```
+
+```
+## Rows: 50
+## Columns: 2
+## $ speed &lt;dbl&gt; 4, 4, 7, 7, 8, 9, 10, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13…
+## $ dist  &lt;dbl&gt; 2, 10, 4, 22, 16, 10, 18, 26, 34, 17, 28, 14, 20, 24, 28, 26, 34…
+```
+
+```r
+# examine dataset using glimpse (with piping)
+my_cars |&gt; glimpse()
+```
+
+```
+## Rows: 50
+## Columns: 2
+## $ speed &lt;dbl&gt; 4, 4, 7, 7, 8, 9, 10, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13…
+## $ dist  &lt;dbl&gt; 2, 10, 4, 22, 16, 10, 18, 26, 34, 17, 28, 14, 20, 24, 28, 26, 34…
+```
+
+---
+
+class: middle
+
+### Week 1 In-class Exercises (TP Lecture 2 - Q1)
+
+***TurningPoint Session ID: bua455s22***
+
+**This is also Question 1 of HW 1 - Parts 2 and 3**
+
+The `cars` dataset is a dataset that is internal to the R software.  The code above saves a **copy** of this dataset with a new name.
+
+&lt;br&gt;
+
+* Where is this copy dataset saved?
+
+---
+
+class: middle
+
+### Week 1 In-class Exercises (TP Lecture 2 - Q2)
+
+***TurningPoint Session ID: bua455s22***
+
+**This is also Question 3 of HW 1 - Parts 2 and 3**
+
+The `my_cars` dataset, which is a saved copy of the R dataset, `cars` has   
+
+* `____` **rows (observations)** 
+
+* `____` **columns (variables)**
+
+---
+
+### Selecting data values by location
+
+- The following R code shows how to select parts of a dataset:
+  - rows
+  - columns 
+  - individual observations
+  
+- We will also cover other ways select parts of a dataset
+  
+- Understanding how to select by location is essential to data management.
+  
+- All datasets in R are matrices with rows and columns.
+
+- Locations within a dataset can be specifed with square brackets:
+    
+   - `my_cars[3,2]`:** observation in **3rd row** and **2nd column** of my_cars dataset
+
+   - Additional examples shown below.
+  
+   - HW 1 includes questions that give you a chance to practice. 
+
+---
+
+### Selecting Data By Row or Column
+
+- Recall that 
+
+  - Values **BEFORE the comma** in the square bracket specify row(s).
+  - Values **AFTER the comma** in the square bracket specify column(s).
+
+
+```r
+# select rows 3, 4 and 5 only:
+my_cars[3:5,]
+```
+
+```
+##   speed dist
+## 3     7    4
+## 4     7   22
+## 5     8   16
+```
+
+```r
+# select column 1 only:
+my_cars[,1]
+```
+
+```
+##  [1]  4  4  7  7  8  9 10 10 10 11 11 12 12 12 12 13 13 13 13 14 14 14 14 15 15
+## [26] 15 16 16 17 17 17 18 18 18 18 19 19 19 20 20 20 20 20 22 23 24 24 24 24 25
+```
+
+---
+
+class: middle
+
+### Selecting Observations by **BOTH** Row and Column
+
+
+```r
+# select observations 10, 11, and 12 within column 1:
+my_cars[10:12, 1]
+```
+
+```
+## [1] 11 11 12
+```
+
+```r
+# select observations 20, 30, and 40, within column 2:
+my_cars[c(20,30,40),2]
+```
+
+```
+## [1] 26 40 48
+```
+
+---
+
+### Week 1 In-class Exercises (TP Lecture 2 - Q3)
+
+***TurningPoint Session ID: bua455s22***
+
+**This is also Question 7 of HW 1 - Parts 2 and 3**
+
+- Complete the command `my_cars[c(____,____,____), ____]` to select and print to the screen:
+
+  - Rows 10, 15, and 20 of column 1 of the `my_cars` dataset.
+  
+&lt;BR&gt;
+
+**RECALL:**
+
+  - **Rows** to be selected are specified **BEFORE the comma**.
+  
+  - **Columns** to be selected are specified **AFTER the comma**.
+
+**The last example in the provided code shows how to use `c()` to group non-consecutive elements**.
+
+---
+
+### Different types of variables
+
+-  There are two main types of data variables.
+
+- The type of variable dictates how it is managed and presented.
+
+- **Numeric variables** can be
+   
+     - decimal, `dbl`
+     
+     - integer, `int`
+
+- **Character variables**, `chr` are text strings
+  
+   - Sometimes a numeric variable is classified as character variable
+  
+     - In that case, the variable can be converted to numeric.
+
+- **Factor** variables, `fct` can be created from character variables or numeric variables. 
+  
+  - factor variables are interpreted as categorical variables by R
+   
+  - factors are useful for plots, tables, and analyses
+  
+- **Logical** variables, `lgl`, are TRUE/FALSE variables (R interprets logical data as 0 or 1)
+
+---
+
+### Example: R starwars dataset
+  
+- The `starwars` dataset has both numeric and character variables.
+- In the chunk below we will save the R dataset, `starwars` to our Global Environment as `my_starwars`.
+
+
+```r
+# save and examine starwars data 
+my_starwars &lt;- starwars
+glimpse(my_starwars)
+```
+
+```
+## Rows: 87
+## Columns: 14
+## $ name       &lt;chr&gt; "Luke Skywalker", "C-3PO", "R2-D2", "Darth Vader", "Leia Or…
+## $ height     &lt;int&gt; 172, 167, 96, 202, 150, 178, 165, 97, 183, 182, 188, 180, 2…
+## $ mass       &lt;dbl&gt; 77.0, 75.0, 32.0, 136.0, 49.0, 120.0, 75.0, 32.0, 84.0, 77.…
+## $ hair_color &lt;chr&gt; "blond", NA, NA, "none", "brown", "brown, grey", "brown", N…
+## $ skin_color &lt;chr&gt; "fair", "gold", "white, blue", "white", "light", "light", "…
+## $ eye_color  &lt;chr&gt; "blue", "yellow", "red", "yellow", "brown", "blue", "blue",…
+## $ birth_year &lt;dbl&gt; 19.0, 112.0, 33.0, 41.9, 19.0, 52.0, 47.0, NA, 24.0, 57.0, …
+## $ sex        &lt;chr&gt; "male", "none", "none", "male", "female", "male", "female",…
+## $ gender     &lt;chr&gt; "masculine", "masculine", "masculine", "masculine", "femini…
+## $ homeworld  &lt;chr&gt; "Tatooine", "Tatooine", "Naboo", "Tatooine", "Alderaan", "T…
+## $ species    &lt;chr&gt; "Human", "Droid", "Droid", "Human", "Human", "Human", "Huma…
+## $ films      &lt;list&gt; &lt;"The Empire Strikes Back", "Revenge of the Sith", "Return…
+## $ vehicles   &lt;list&gt; &lt;"Snowspeeder", "Imperial Speeder Bike"&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;, "Imp…
+## $ starships  &lt;list&gt; &lt;"X-wing", "Imperial shuttle"&gt;, &lt;&gt;, &lt;&gt;, "TIE Advanced x1",…
+```
+
+---
+
+### Examine the starwars species
+
+- Below are two ways to use the `unique` command, with and without piping.
+ 
+- To indicate a variable WITHIN a dataset we use `$`, the accessor operator
+
+
+```r
+# examine the list of species
+unique(my_starwars$species)
+```
+
+```
+##  [1] "Human"          "Droid"          "Wookiee"        "Rodian"        
+##  [5] "Hutt"           "Yoda's species" "Trandoshan"     "Mon Calamari"  
+##  [9] "Ewok"           "Sullustan"      "Neimodian"      "Gungan"        
+## [13] NA               "Toydarian"      "Dug"            "Zabrak"        
+## [17] "Twi'lek"        "Vulptereen"     "Xexto"          "Toong"         
+## [21] "Cerean"         "Nautolan"       "Tholothian"     "Iktotchi"      
+## [25] "Quermian"       "Kel Dor"        "Chagrian"       "Geonosian"     
+## [29] "Mirialan"       "Clawdite"       "Besalisk"       "Kaminoan"      
+## [33] "Aleena"         "Skakoan"        "Muun"           "Togruta"       
+## [37] "Kaleesh"        "Pau'an"
+```
+
+
+```r
+# same task with piping uses select command:
+my_starwars |&gt;
+  select(species) |&gt; unique()
+```
+
+---
+
+### Using `table` to Examine One Variable
+
+- `table` allows you to tally the number of observations in each category of a variable.
+
+  - Very useful when making data management decisions
+
+
+```r
+# using $ to specify hair_color in my_starwars dataset
+table(my_starwars$hair_color)
+```
+
+```
+## 
+##        auburn  auburn, grey auburn, white         black         blond 
+##             1             1             1            13             3 
+##        blonde         brown   brown, grey          grey          none 
+##             1            18             1             1            37 
+##       unknown         white 
+##             1             4
+```
+
+
+```r
+# using piping to select variable
+my_starwars |&gt;
+  select(hair_color) |&gt;table()
+```
+
+---
+
+### Using `table` to Examine Two Variables
+
+- Second command saves summary to Global Environment and prints it to screen.
+  - **To save an object:** assign it to a name with `&lt;-`
+  - **To print an object to the screen as you save it:** enclose it in parentheses.
+  - Objects can be values, vectors, datasets, plots, tables, etc.
+  
+
+```r
+# using $ to specify variables in a dataset
+table(my_starwars$sex, my_starwars$hair_color)
+```
+
+
+```r
+# using piping to select variables; results is saved and printed
+(sex_hclr_smry &lt;- my_starwars |&gt; select(sex, hair_color) |&gt;table())
+```
+
+```
+##                 hair_color
+## sex              auburn auburn, grey auburn, white black blond blonde brown
+##   female              1            0             0     3     0      1     6
+##   hermaphroditic      0            0             0     0     0      0     0
+##   male                0            1             1     9     3      0    11
+##   none                0            0             0     0     0      0     0
+##                 hair_color
+## sex              brown, grey grey none unknown white
+##   female                   0    0    4       0     1
+##   hermaphroditic           0    0    0       0     0
+##   male                     1    1   29       0     3
+##   none                     0    0    3       0     0
+```
+
+---
+
+### Summarizing Numeric Data
+
+- `summary` and `mean` are two quick ways to summarize numeric variables.
+
+
+```r
+# summarize height of starwars characters (with piping)
+my_starwars |&gt; select(height) |&gt; summary()
+```
+
+```
+##      height     
+##  Min.   : 66.0  
+##  1st Qu.:167.0  
+##  Median :180.0  
+##  Mean   :174.4  
+##  3rd Qu.:191.0  
+##  Max.   :264.0  
+##  NA's   :6
+```
+
+```r
+# calculate the mean (without piping)
+# na.rm=T is required to remove missing obs before calculation
+mean(my_starwars$height, na.rm=T)
+```
+
+```
+## [1] 174.358
+```
+
+---
+
+### Week 1 In-class Exercises (TP Lecture 2 - Q4)
+
+**TurningPoint Session ID: bua455s22**
+
+**This is also Question 10 of HW 1 - Parts 2 and 3**
+
+The output from the `glimpse(my_starwars)` command lists each variable and shows its type.
+
+- This dataset has `____` character variables (labeled `&lt;chr&gt;`).
+
+- This dataset has `____` numeric variables.
+
+  - **RECALL:** Numeric variables include both decimal (`&lt;dbl&gt;`) AND integer (`&lt;int&gt;`) variables.
+  
+&lt;br&gt;
+
+**NOTE:** The `glimpse` command is a newer alternative to `str` and will only work if the `tidyverse` package suite is installed and loaded.
+
+---
+
+.panelset[
+
+.panel[.panel-name[**Preview**]
+
+
+***"The greatest value of a picture is when it forces us to notice what we never expected to see.”*** *-John W. Tukey* 
+
+&lt;br&gt;
+
+#### Data Mgmt for a Basic Boxplot
+
+- This is a preview using `ggplot` which we will use throughout this course.
+
+- Plotting data well requires data management and planning 
+
+   - The preview below ALSO includes data management skills we will cover
+   
+- The very first plot is the bare minimum to create a boxplot.
+
+&lt;br&gt;
+
+.center[***To save a plot AND print it to the screen, enclose all code in parentheses.***]
+
+
+]
+
+
+.panel[.panel-name[**Data Management**]
+
+Code shows data management for a plot with comments
+
+
+```r
+# dataset my_starwars_plt is created for the plot
+# used select command to select variables
+# used filter command to filter data to only to species, Humans and Droid
+# used mutate command to create new variable bmi
+  # bmi = weight(kg)/height(m)^2
+# filtered out observations where bmi was a missing value, NA
+my_starwars_plt &lt;- my_starwars |&gt;
+  select(species, sex, height, mass) |&gt;
+  filter(species %in% c("Human", "Droid")) |&gt;
+  mutate(bmi = mass/((height/100))^2) |&gt;
+  filter(!is.na(bmi)) 
+```
+
+]
+
+.panel[.panel-name[**Examine Data**]
+
+.pull-left[
+
+#### Original data
+
+
+```r
+my_starwars |&gt; glimpse(width=40)
+```
+
+```
+## Rows: 87
+## Columns: 14
+## $ name       &lt;chr&gt; "Luke Skywalker", "…
+## $ height     &lt;int&gt; 172, 167, 96, 202, …
+## $ mass       &lt;dbl&gt; 77, 75, 32, 136, 49…
+## $ hair_color &lt;chr&gt; "blond", NA, NA, "n…
+## $ skin_color &lt;chr&gt; "fair", "gold", "wh…
+## $ eye_color  &lt;chr&gt; "blue", "yellow", "…
+## $ birth_year &lt;dbl&gt; 19.0, 112.0, 33.0, …
+## $ sex        &lt;chr&gt; "male", "none", "no…
+## $ gender     &lt;chr&gt; "masculine", "mascu…
+## $ homeworld  &lt;chr&gt; "Tatooine", "Tatooi…
+## $ species    &lt;chr&gt; "Human", "Droid", "…
+## $ films      &lt;list&gt; &lt;"The Empire Strik…
+## $ vehicles   &lt;list&gt; &lt;"Snowspeeder", "I…
+## $ starships  &lt;list&gt; &lt;"X-wing", "Imperi…
+```
+
+]
+
+.pull-right[
+
+#### Modified data
+
+
+```r
+my_starwars_plt |&gt; glimpse(width=40)
+```
+
+```
+## Rows: 26
+## Columns: 5
+## $ species &lt;chr&gt; "Human", "Droid", "Dro…
+## $ sex     &lt;chr&gt; "male", "none", "none"…
+## $ height  &lt;int&gt; 172, 167, 96, 202, 150…
+## $ mass    &lt;dbl&gt; 77, 75, 32, 136, 49, 1…
+## $ bmi     &lt;dbl&gt; 26.02758, 26.89232, 34…
+```
+
+]
+
+]
+
+.panel[.panel-name[**Unformatted Plot**]
+
+
+```r
+my_starwars_plt |&gt; 
+  ggplot() +
+  geom_boxplot(aes(x=species, y=bmi))
+```
+
+&lt;img src="docs_files/figure-html/unformatted boxplot-1.png" width="576" style="display: block; margin: auto;" /&gt;
+
+]
+
+]
+
+---
+.panelset[
+
+.panel[.panel-name[**Saved Unformatted Plot**]
+
+
+```r
+(sw_boxplot1 &lt;- my_starwars_plt |&gt; 
+  ggplot() +
+  geom_boxplot(aes(x=species, y=bmi)))
+```
+
+&lt;img src="docs_files/figure-html/unformatted saved boxplot-1.png" width="576" style="display: block; margin: auto;" /&gt;
+
+]
+
+.panel[.panel-name[**`fill` option**]
+
+
+```r
+(sw_boxplot2 &lt;- my_starwars_plt |&gt; 
+  ggplot() +
+  geom_boxplot(aes(x=species, y=bmi, fill=sex)))
+```
+
+&lt;img src="docs_files/figure-html/saved boxplot with fill-1.png" width="576" style="display: block; margin: auto;" /&gt;
+
+]
+
+.panel[.panel-name[**format background**]
+
+
+```r
+(sw_boxplot3 &lt;- my_starwars_plt |&gt; 
+  ggplot() +
+  geom_boxplot(aes(x=species, y=bmi, fill=sex))+ theme_classic())
+```
+
+&lt;img src="docs_files/figure-html/saved boxplot with fill and theme-1.png" width="576" style="display: block; margin: auto;" /&gt;
+
+]
+
+.panel[.panel-name[**R code - Final Plot**]
+
+
+```r
+# created a factor variable sexF to modify order (levels) for plot
+my_starwars_plt &lt;- my_starwars_plt |&gt;
+  mutate(sexF = factor(sex, 
+                       levels = c("male", "female", "none"),
+                       labels =c("Male", "Female", "None")))
+
+# formatted plot with factor variable, text formatted, and borders
+sw_boxplot4 &lt;- my_starwars_plt |&gt;
+  ggplot() +
+  geom_boxplot(aes(x=species, y=bmi, fill=sexF)) + 
+  theme_classic() + 
+  labs(title="Comparison of Human and Droid BMI",
+       subtitle="22 Humans and 4 Droids from Star Wars Universe",
+       caption="Data Source: dplyr package in R",
+       x="",y="BMI", fill="Sex") + 
+  theme(plot.title = element_text(size = 20),
+        plot.subtitle = element_text(size = 15),
+        axis.title = element_text(size=18),
+        axis.text = element_text(size=15),
+        plot.caption = element_text(size = 10),
+        legend.text = element_text(size = 12),
+        legend.title = element_text(size = 15),
+        panel.border = element_rect(colour = "lightgrey", fill=NA, size=2),
+        plot.background = element_rect(colour = "darkgrey", fill=NA, size=2))
+```
+
+]
+
+.panel[.panel-name[**Final Plot**]
+
+.center[
+
+&lt;img src="docs_files/figure-html/final plot-1.png" width="648" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+]
+
+
+]
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%/%total%",
+"highlightStyle": "tomorrow-night-bright",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true,
+"keep_md": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
