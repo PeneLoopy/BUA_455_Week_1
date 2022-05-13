@@ -332,7 +332,7 @@ See provided **[tutorial videos]()**, if you need to update your version of R or
 
 .pull-right[
 
-.middle[![input box for creating a new R project](docs_files/images/naming_new_project.png)]
+.middle[![input box for creating a new R project](index_files/images/naming_new_project.png)]
 
 ]
 
@@ -366,11 +366,11 @@ Your R project, HW 1 should now be open in R.
 
 .pull-right[
 
-![add folder button in RStudio file pane](docs_files/images/add_folder.png)
+![add folder button in RStudio file pane](index_files/images/add_folder.png)
 
 <br>
 
-![naming a new folder code_data_output](docs_files/images/cdo.png)
+![naming a new folder code_data_output](index_files/images/cdo.png)
 
 ]
     
@@ -400,7 +400,7 @@ Your R project, HW 1 should now be open in R.
 
 .pull-right[
 
-![R markdown file creation](docs_files/images/new_R_Markdown_file.png)
+![R markdown file creation](index_files/images/new_R_Markdown_file.png)
 
 ]
 
@@ -422,11 +422,11 @@ After completing the previous instructions, you should have
 
 3. Name this file **`HW1_FirstName_LastName`** (with **NO SPACES** in the name)
 
-    ![saving a Markdown file](docs_files/images/markdown_file_name.png)
+    ![saving a Markdown file](index_files/images/markdown_file_name.png)
 
 4. Make sure it is saved to your code_data_output folder.
 
-5. Click the Knit button to render the Markdown file and examine it.   ![Knit button in RStudio](docs_files/images/knit_button.png)
+5. Click the Knit button to render the Markdown file and examine it.   ![Knit button in RStudio](index_files/images/knit_button.png)
 
 ---
 
@@ -451,7 +451,7 @@ After completing the previous instructions, you should have
       
       - In this class, we want to see the R code.
       
-2. Run this chunk by clicking green triangle: ![green R chunk triangle](docs_files/images/rmd_chunk1_buttons.png)
+2. Run this chunk by clicking green triangle: ![green R chunk triangle](index_files/images/rmd_chunk1_buttons.png)
       
 2. Verify that you have all of the packages listed.
 
@@ -499,7 +499,7 @@ p_loaded()
 
 1. Click Outline button in upper right corner of pane: 
 
-   ![Markdown outline button](docs_files/images/outline_button.png)
+   ![Markdown outline button](index_files/images/outline_button.png)
    
    - Outline appears and you click to navigate.
    
@@ -507,7 +507,7 @@ p_loaded()
 
 2. Click navigation bar at bottom: 
 
-   ![R markdown bottom navigation bar](docs_files/images/rmd_bottom_nav_bar.png)
+   ![R markdown bottom navigation bar](index_files/images/rmd_bottom_nav_bar.png)
 
    - Chunk numbers and Names are Shown
    
