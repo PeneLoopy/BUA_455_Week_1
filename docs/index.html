@@ -564,8 +564,8 @@ glimpse(my_cars)
 ```
 ## Rows: 50
 ## Columns: 2
-## $ speed &lt;dbl&gt; 4, 4, 7, 7, 8, 9, 10, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13…
-## $ dist  &lt;dbl&gt; 2, 10, 4, 22, 16, 10, 18, 26, 34, 17, 28, 14, 20, 24, 28, 26, 34…
+## $ speed &lt;dbl&gt; 4, 4, 7, 7, 8, 9, 10, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13, 14, 14, 14…
+## $ dist  &lt;dbl&gt; 2, 10, 4, 22, 16, 10, 18, 26, 34, 17, 28, 14, 20, 24, 28, 26, 34, 34, 46, 26, 36…
 ```
 
 ```r
@@ -576,8 +576,8 @@ my_cars |&gt; glimpse()
 ```
 ## Rows: 50
 ## Columns: 2
-## $ speed &lt;dbl&gt; 4, 4, 7, 7, 8, 9, 10, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13…
-## $ dist  &lt;dbl&gt; 2, 10, 4, 22, 16, 10, 18, 26, 34, 17, 28, 14, 20, 24, 28, 26, 34…
+## $ speed &lt;dbl&gt; 4, 4, 7, 7, 8, 9, 10, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13, 14, 14, 14…
+## $ dist  &lt;dbl&gt; 2, 10, 4, 22, 16, 10, 18, 26, 34, 17, 28, 14, 20, 24, 28, 26, 34, 34, 46, 26, 36…
 ```
 
 ---
@@ -671,8 +671,8 @@ my_cars[,1]
 ```
 
 ```
-##  [1]  4  4  7  7  8  9 10 10 10 11 11 12 12 12 12 13 13 13 13 14 14 14 14 15 15
-## [26] 15 16 16 17 17 17 18 18 18 18 19 19 19 20 20 20 20 20 22 23 24 24 24 24 25
+##  [1]  4  4  7  7  8  9 10 10 10 11 11 12 12 12 12 13 13 13 13 14 14 14 14 15 15 15 16 16 17 17
+## [31] 17 18 18 18 18 19 19 19 20 20 20 20 20 22 23 24 24 24 24 25
 ```
 
 ---
@@ -770,20 +770,20 @@ glimpse(my_starwars)
 ```
 ## Rows: 87
 ## Columns: 14
-## $ name       &lt;chr&gt; "Luke Skywalker", "C-3PO", "R2-D2", "Darth Vader", "Leia Or…
-## $ height     &lt;int&gt; 172, 167, 96, 202, 150, 178, 165, 97, 183, 182, 188, 180, 2…
-## $ mass       &lt;dbl&gt; 77.0, 75.0, 32.0, 136.0, 49.0, 120.0, 75.0, 32.0, 84.0, 77.…
-## $ hair_color &lt;chr&gt; "blond", NA, NA, "none", "brown", "brown, grey", "brown", N…
-## $ skin_color &lt;chr&gt; "fair", "gold", "white, blue", "white", "light", "light", "…
-## $ eye_color  &lt;chr&gt; "blue", "yellow", "red", "yellow", "brown", "blue", "blue",…
-## $ birth_year &lt;dbl&gt; 19.0, 112.0, 33.0, 41.9, 19.0, 52.0, 47.0, NA, 24.0, 57.0, …
-## $ sex        &lt;chr&gt; "male", "none", "none", "male", "female", "male", "female",…
-## $ gender     &lt;chr&gt; "masculine", "masculine", "masculine", "masculine", "femini…
-## $ homeworld  &lt;chr&gt; "Tatooine", "Tatooine", "Naboo", "Tatooine", "Alderaan", "T…
-## $ species    &lt;chr&gt; "Human", "Droid", "Droid", "Human", "Human", "Human", "Huma…
-## $ films      &lt;list&gt; &lt;"The Empire Strikes Back", "Revenge of the Sith", "Return…
-## $ vehicles   &lt;list&gt; &lt;"Snowspeeder", "Imperial Speeder Bike"&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;, "Imp…
-## $ starships  &lt;list&gt; &lt;"X-wing", "Imperial shuttle"&gt;, &lt;&gt;, &lt;&gt;, "TIE Advanced x1",…
+## $ name       &lt;chr&gt; "Luke Skywalker", "C-3PO", "R2-D2", "Darth Vader", "Leia Organa", "Owen Lar…
+## $ height     &lt;int&gt; 172, 167, 96, 202, 150, 178, 165, 97, 183, 182, 188, 180, 228, 180, 173, 17…
+## $ mass       &lt;dbl&gt; 77.0, 75.0, 32.0, 136.0, 49.0, 120.0, 75.0, 32.0, 84.0, 77.0, 84.0, NA, 112…
+## $ hair_color &lt;chr&gt; "blond", NA, NA, "none", "brown", "brown, grey", "brown", NA, "black", "aub…
+## $ skin_color &lt;chr&gt; "fair", "gold", "white, blue", "white", "light", "light", "light", "white, …
+## $ eye_color  &lt;chr&gt; "blue", "yellow", "red", "yellow", "brown", "blue", "blue", "red", "brown",…
+## $ birth_year &lt;dbl&gt; 19.0, 112.0, 33.0, 41.9, 19.0, 52.0, 47.0, NA, 24.0, 57.0, 41.9, 64.0, 200.…
+## $ sex        &lt;chr&gt; "male", "none", "none", "male", "female", "male", "female", "none", "male",…
+## $ gender     &lt;chr&gt; "masculine", "masculine", "masculine", "masculine", "feminine", "masculine"…
+## $ homeworld  &lt;chr&gt; "Tatooine", "Tatooine", "Naboo", "Tatooine", "Alderaan", "Tatooine", "Tatoo…
+## $ species    &lt;chr&gt; "Human", "Droid", "Droid", "Human", "Human", "Human", "Human", "Droid", "Hu…
+## $ films      &lt;list&gt; &lt;"The Empire Strikes Back", "Revenge of the Sith", "Return of the Jedi", "…
+## $ vehicles   &lt;list&gt; &lt;"Snowspeeder", "Imperial Speeder Bike"&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;, "Imperial Speeder Bi…
+## $ starships  &lt;list&gt; &lt;"X-wing", "Imperial shuttle"&gt;, &lt;&gt;, &lt;&gt;, "TIE Advanced x1", &lt;&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;,…
 ```
 
 ---
@@ -801,16 +801,14 @@ unique(my_starwars$species)
 ```
 
 ```
-##  [1] "Human"          "Droid"          "Wookiee"        "Rodian"        
-##  [5] "Hutt"           "Yoda's species" "Trandoshan"     "Mon Calamari"  
-##  [9] "Ewok"           "Sullustan"      "Neimodian"      "Gungan"        
-## [13] NA               "Toydarian"      "Dug"            "Zabrak"        
-## [17] "Twi'lek"        "Vulptereen"     "Xexto"          "Toong"         
-## [21] "Cerean"         "Nautolan"       "Tholothian"     "Iktotchi"      
-## [25] "Quermian"       "Kel Dor"        "Chagrian"       "Geonosian"     
-## [29] "Mirialan"       "Clawdite"       "Besalisk"       "Kaminoan"      
-## [33] "Aleena"         "Skakoan"        "Muun"           "Togruta"       
-## [37] "Kaleesh"        "Pau'an"
+##  [1] "Human"          "Droid"          "Wookiee"        "Rodian"         "Hutt"          
+##  [6] "Yoda's species" "Trandoshan"     "Mon Calamari"   "Ewok"           "Sullustan"     
+## [11] "Neimodian"      "Gungan"         NA               "Toydarian"      "Dug"           
+## [16] "Zabrak"         "Twi'lek"        "Vulptereen"     "Xexto"          "Toong"         
+## [21] "Cerean"         "Nautolan"       "Tholothian"     "Iktotchi"       "Quermian"      
+## [26] "Kel Dor"        "Chagrian"       "Geonosian"      "Mirialan"       "Clawdite"      
+## [31] "Besalisk"       "Kaminoan"       "Aleena"         "Skakoan"        "Muun"          
+## [36] "Togruta"        "Kaleesh"        "Pau'an"
 ```
 
 
@@ -836,12 +834,10 @@ table(my_starwars$hair_color)
 
 ```
 ## 
-##        auburn  auburn, grey auburn, white         black         blond 
-##             1             1             1            13             3 
-##        blonde         brown   brown, grey          grey          none 
-##             1            18             1             1            37 
-##       unknown         white 
-##             1             4
+##        auburn  auburn, grey auburn, white         black         blond        blonde 
+##             1             1             1            13             3             1 
+##         brown   brown, grey          grey          none       unknown         white 
+##            18             1             1            37             1             4
 ```
 
 
@@ -874,17 +870,17 @@ table(my_starwars$sex, my_starwars$hair_color)
 
 ```
 ##                 hair_color
-## sex              auburn auburn, grey auburn, white black blond blonde brown
-##   female              1            0             0     3     0      1     6
-##   hermaphroditic      0            0             0     0     0      0     0
-##   male                0            1             1     9     3      0    11
-##   none                0            0             0     0     0      0     0
+## sex              auburn auburn, grey auburn, white black blond blonde brown brown, grey grey
+##   female              1            0             0     3     0      1     6           0    0
+##   hermaphroditic      0            0             0     0     0      0     0           0    0
+##   male                0            1             1     9     3      0    11           1    1
+##   none                0            0             0     0     0      0     0           0    0
 ##                 hair_color
-## sex              brown, grey grey none unknown white
-##   female                   0    0    4       0     1
-##   hermaphroditic           0    0    0       0     0
-##   male                     1    1   29       0     3
-##   none                     0    0    3       0     0
+## sex              none unknown white
+##   female            4       0     1
+##   hermaphroditic    0       0     0
+##   male             29       0     3
+##   none              3       0     0
 ```
 
 ---
@@ -1075,7 +1071,7 @@ my_starwars_plt |&gt;
 
 
 ```r
-(sw_boxplot1 &lt;- my_starwars_plt |&gt; 
+(sw_box1 &lt;- my_starwars_plt |&gt; 
   ggplot() +
   geom_boxplot(aes(x=species, y=bmi)))
 ```
@@ -1088,7 +1084,7 @@ my_starwars_plt |&gt;
 
 
 ```r
-(sw_boxplot2 &lt;- my_starwars_plt |&gt; 
+(sw_box2 &lt;- my_starwars_plt |&gt; 
   ggplot() +
   geom_boxplot(aes(x=species, y=bmi, fill=sex)))
 ```
@@ -1101,7 +1097,7 @@ my_starwars_plt |&gt;
 
 
 ```r
-(sw_boxplot3 &lt;- my_starwars_plt |&gt; 
+(sw_box3 &lt;- my_starwars_plt |&gt; 
   ggplot() +
   geom_boxplot(aes(x=species, y=bmi, fill=sex))+ theme_classic())
 ```
@@ -1121,7 +1117,7 @@ my_starwars_plt &lt;- my_starwars_plt |&gt;
                        labels =c("Male", "Female", "None")))
 
 # formatted plot with factor variable, text formatted, and borders
-sw_boxplot4 &lt;- my_starwars_plt |&gt;
+sw_box4 &lt;- my_starwars_plt |&gt;
   ggplot() +
   geom_boxplot(aes(x=species, y=bmi, fill=sexF)) + 
   theme_classic() + 
@@ -1149,6 +1145,52 @@ sw_boxplot4 &lt;- my_starwars_plt |&gt;
 &lt;img src="docs_files/figure-html/final plot-1.png" width="648" style="display: block; margin: auto;" /&gt;
 
 ]]]
+
+---
+
+background-image: url("docs_files/images/tired_panda_faded.png")
+background-size: cover
+
+.pull-left[
+
+### **Key Points from Week 1**
+
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph2[
+
+**File Management:**
+
+- REQUIRED: current versions of R and RSudio
+
+- Create a **BUA 455 folder** on your laptop
+  - **NOT** in your Downloads folder.
+
+- R Markdown files
+  - Creating and Executing R chunks 
+  
+**Data Management:**
+- Examining data:
+  - `glimpse`, `unique`, `table`, `summary`
+  
+- Selecting data by row and column using square brackets
+
+- Different types of variables and how to summarize them
+
+]
+
+]
+
+.pull-right[
+
+
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3[
+**You may submit an 'Engagement Question or Comment' about Week 1 lectures until Thursday, 9/1, at midnight on Blackboard.**
+]
+
+
+]
+
+]
+
 
 
     </textarea>

@@ -1028,7 +1028,7 @@ my_starwars_plt |>
 .panel[.panel-name[**Saved Unformatted Plot**]
 
 ```{r unformatted saved boxplot, fig.width=8, fig.height=6, fig.align='center'}
-(sw_boxplot1 <- my_starwars_plt |> 
+(sw_box1 <- my_starwars_plt |> 
   ggplot() +
   geom_boxplot(aes(x=species, y=bmi)))
 ```
@@ -1038,7 +1038,7 @@ my_starwars_plt |>
 .panel[.panel-name[**`fill` option**]
 
 ```{r saved boxplot with fill, fig.width=8, fig.height=6, fig.align='center'}
-(sw_boxplot2 <- my_starwars_plt |> 
+(sw_box2 <- my_starwars_plt |> 
   ggplot() +
   geom_boxplot(aes(x=species, y=bmi, fill=sex)))
 ```
@@ -1048,7 +1048,7 @@ my_starwars_plt |>
 .panel[.panel-name[**format background**]
 
 ```{r saved boxplot with fill and theme,  fig.width=8, fig.height=6, fig.align='center'}
-(sw_boxplot3 <- my_starwars_plt |> 
+(sw_box3 <- my_starwars_plt |> 
   ggplot() +
   geom_boxplot(aes(x=species, y=bmi, fill=sex))+ theme_classic())
 ```
@@ -1065,7 +1065,7 @@ my_starwars_plt <- my_starwars_plt |>
                        labels =c("Male", "Female", "None")))
 
 # formatted plot with factor variable, text formatted, and borders
-sw_boxplot4 <- my_starwars_plt |>
+sw_box4 <- my_starwars_plt |>
   ggplot() +
   geom_boxplot(aes(x=species, y=bmi, fill=sexF)) + 
   theme_classic() + 
@@ -1091,10 +1091,56 @@ sw_boxplot4 <- my_starwars_plt |>
 .center[
 
 ```{r final plot, echo=F,  fig.width=9, fig.height=7, fig.align='center'}
-sw_boxplot4
+sw_box4
 
 ```
 
 ]]]
+
+---
+
+background-image: url("docs_files/images/tired_panda_faded.png")
+background-size: cover
+
+.pull-left[
+
+### **Key Points from Week 1**
+
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph2[
+
+**File Management:**
+
+- REQUIRED: current versions of R and RSudio
+
+- Create a **BUA 455 folder** on your laptop
+  - **NOT** in your Downloads folder.
+
+- R Markdown files
+  - Creating and Executing R chunks 
+  
+**Data Management:**
+- Examining data:
+  - `glimpse`, `unique`, `table`, `summary`
+  
+- Selecting data by row and column using square brackets
+
+- Different types of variables and how to summarize them
+
+]
+
+]
+
+.pull-right[
+
+
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3[
+**You may submit an 'Engagement Question or Comment' about Week 1 lectures until Thursday, 9/1, at midnight on Blackboard.**
+]
+
+
+]
+
+]
+
 
 
