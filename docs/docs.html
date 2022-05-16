@@ -4,7 +4,7 @@
     <title>BUA 455 - Week 1</title>
     <meta charset="utf-8" />
     <meta name="author" content="Penelope Pooler Eisenbies" />
-    <meta name="date" content="2022-05-13" />
+    <meta name="date" content="2022-05-15" />
     <script src="docs_files/header-attrs/header-attrs.js"></script>
     <link href="docs_files/panelset/panelset.css" rel="stylesheet" />
     <script src="docs_files/panelset/panelset.js"></script>
@@ -17,42 +17,45 @@
   </head>
   <body>
     <textarea id="source">
-class: center, middle, inverse, title-slide
 
-.title[
-# BUA 455 - Week 1
-]
-.subtitle[
-## R Projects, R Markdown, and R Syntax
-]
-.author[
-### Penelope Pooler Eisenbies
-]
-.date[
-### 2022-05-13
-]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+background-image: url("docs_files/images/sloth_faded.png")
+background-size: cover
+
+class: bottom, right
+
+## BUA 455 - Week 1
+
+### R Projects, R Markdown, and R Syntax
+
+&lt;br&gt;
+
+
+#### Penelope Pooler Eisenbies
+
+#### 2022-05-15
+
+[Wikipedia Sloth Page](https://en.wikipedia.org/wiki/Sloth)
 
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Course Background
-
 
 #### REQUIRED Pre-class Information
 
@@ -114,17 +117,26 @@ What is the current version of R (and hopefully the version on your computer) ca
 - Vigorous Calisthenics
 - Shake and Throw
 
-&lt;br&gt;
+See provided **[tutorial videos]()**, for information in installing (or reinstalling) R and RStudio.
 
-See provided **[tutorial videos]()**, if you need to update your version of R or RStudio.
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt3[
 
-***NOTE: R updates to a new version two or three times a year. When a new version is available, you should delete the old version and download and install the new version of R as soon as possilbe.***
+**NOTE:** R updates to a new version two or three times each year. 
+
+**When a new version is released:** Delete the old version and download and install the new version of R as soon as possible.
+
+]
+
 
 ---
 
 ### HW 1 - Parts 2 and 3
 
-- Will be introduced today and covered in depth on Thursday
+.pull-left[
+
+Introduced today and covered in depth on Thursday
+
+- **Due Wednesday, 9/7/22**
 
 - We will work through the steps to
 
@@ -132,33 +144,46 @@ See provided **[tutorial videos]()**, if you need to update your version of R or
   
   - Create a code_data_output folder
   
+     - Internal folder in R project 
+  
   - Create and save an R Markdown file
   
   - Modify the R Markdown file header and setup chunk
   
   - Create, edit and run R chunks
   
-  &lt;br&gt;
+  - Answer questions based on R output
+  
+- [Instructions for HW 1 - Parts 2 &amp; 3]() are on blackboard (click on link).
 
-- The [HW 1 - Parts 2 and 3 instructions]() are on blackboard (click on link).. 
+]
+
+.pull-right[
+
+![Thoughtful looking owl named Dumbledore](docs_files/images/owl.png)
+[Hawk Creek Wildlife Center](https://www.hawkcreek.org/product/dumbledore-spectacled-owl/)
+
+]
+
+
 
 ---
 
 ### R Project Anatomy for BUA 455
 
-- All Lectures, Assignments and student project work will be contained in R project directories
+.pull-left[
 
-- Project structure can be complex
+Lectures, assignments and projects are contained in R projects.
 
-- In this course, we will keep it simple
+Project structure can be complex, but we will keep it simple.
+
 
 #### Outer Project Folder contains:
 
 - **.Rproj** file
 
-  - This file is required and makes the folder an R project.
-  
-  - You can click on this file to open RStudio, and the Project
+  - **Required** - makes the folder an R project.
+  - Click on .Rproj file to open RStudio and project
   
 - **README.txt** file
 
@@ -168,7 +193,24 @@ See provided **[tutorial videos]()**, if you need to update your version of R or
 
    - R files such as R Markdown files, R Scripts
    - input data (.csv) files and image files
-   - output documents, summary tables, plots
+   - output documents, summary tables, plots]
+
+
+   
+.pull-right[
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+![hard-working beaver](docs_files/images/beaver.png)
+
+[National Zoo](https://nationalzoo.si.edu/animals/beaver)
+
+]
+
+
+]
 
 
 ---
@@ -192,9 +234,14 @@ See provided **[tutorial videos]()**, if you need to update your version of R or
 
 - Get accustomed to copying and pasting setup chunks from previous work
 
-&lt;br&gt;
+.center[
 
-***If Header or Setup have errors, the R Markdown file cannot be knit (rendered)***
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt4[
+**If Header or Setup have errors, the R Markdown file cannot be knit (rendered)**
+]
+
+]
+
 
 ---
 
@@ -215,9 +262,14 @@ See provided **[tutorial videos]()**, if you need to update your version of R or
        - create summary tables and plots
        - do analyses (not in BUA 455)
        
-&lt;br&gt;
+.center[
+
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt4[
+**Most of BUA 455 is spent working WITHIN R chunks to manage and curate data.**
+]
+
+]
     
-***Most of BUA 455 is spent working WITHIN R chunks to manage and curate data.***
 
 ---
 
@@ -364,17 +416,21 @@ After completing the previous instructions, you should have
    - Change this to `include=TRUE` so that your setup chunk will appear in the document if you knit it.
       - In finished documents for a non-technical audience, no (or minimal) R code appears.
       
-      - In this class, we want to see the R code.
-      
 2. Run this chunk by clicking green triangle: ![green R chunk triangle](docs_files/images/rmd_chunk1_buttons.png)
       
 2. Verify that you have all of the packages listed.
 
-***You cannot complete this course if your software is not working properly.***
+.center[
+
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph2.mt3[
+**You cannot complete this course if your software is not working properly.**
+]
+
+]
       
 ]
 
-.panel[.panel-name[R code for setup chunk]
+.panel[.panel-name[R code for HW 1 setup R Chunk]
 
 
 ```r
@@ -399,9 +455,16 @@ p_loaded()
 &gt; [7] "readr"     "tidyr"     "tibble"    "ggplot2"   "tidyverse" "pacman"  
 
 - If some packages are missing: **make sure you have latest version of R and RStudio**
-- If your software is up to date, then come to Zoom clinic this Friday.
+- If your software is up to date, come to Zoom clinic this Friday.
 
-***You cannot complete this course if your software is not working properly.***
+.center[
+
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph2.mt3[
+**You cannot complete this course if your software is not working properly.**
+]
+
+]
+
 
 ]
 
@@ -501,8 +564,8 @@ glimpse(my_cars)
 ```
 ## Rows: 50
 ## Columns: 2
-## $ speed &lt;dbl&gt; 4, 4, 7, 7, 8, 9, 10, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13…
-## $ dist  &lt;dbl&gt; 2, 10, 4, 22, 16, 10, 18, 26, 34, 17, 28, 14, 20, 24, 28, 26, 34…
+## $ speed &lt;dbl&gt; 4, 4, 7, 7, 8, 9, 10, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13, 14, 14, 14…
+## $ dist  &lt;dbl&gt; 2, 10, 4, 22, 16, 10, 18, 26, 34, 17, 28, 14, 20, 24, 28, 26, 34, 34, 46, 26, 36…
 ```
 
 ```r
@@ -513,8 +576,8 @@ my_cars |&gt; glimpse()
 ```
 ## Rows: 50
 ## Columns: 2
-## $ speed &lt;dbl&gt; 4, 4, 7, 7, 8, 9, 10, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13…
-## $ dist  &lt;dbl&gt; 2, 10, 4, 22, 16, 10, 18, 26, 34, 17, 28, 14, 20, 24, 28, 26, 34…
+## $ speed &lt;dbl&gt; 4, 4, 7, 7, 8, 9, 10, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13, 14, 14, 14…
+## $ dist  &lt;dbl&gt; 2, 10, 4, 22, 16, 10, 18, 26, 34, 17, 28, 14, 20, 24, 28, 26, 34, 34, 46, 26, 36…
 ```
 
 ---
@@ -533,6 +596,8 @@ The `cars` dataset is a dataset that is internal to the R software.  The code ab
 
 * Where is this copy dataset saved?
 
+
+
 ---
 
 class: middle
@@ -549,6 +614,12 @@ The `my_cars` dataset, which is a saved copy of the R dataset, `cars` has
 
 * `____` **columns (variables)**
 
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt5[
+
+**Number rows and columns of a dataset can be seen in the Global Environment or by viewing the output from .bg-lavender[`glimpse`]**
+
+]
+
 ---
 
 ### Selecting data values by location
@@ -564,13 +635,13 @@ The `my_cars` dataset, which is a saved copy of the R dataset, `cars` has
   
 - All datasets in R are matrices with rows and columns.
 
-- Locations within a dataset can be specifed with square brackets:
+- Locations within a dataset can be specified with square brackets:
     
    - `my_cars[3,2]`:** observation in **3rd row** and **2nd column** of my_cars dataset
 
-   - Additional examples shown below.
+   - Additional examples follow.
   
-   - HW 1 includes questions that give you a chance to practice. 
+   - HW 1 also includes questions about this to provide more practice. 
 
 ---
 
@@ -578,8 +649,8 @@ The `my_cars` dataset, which is a saved copy of the R dataset, `cars` has
 
 - Recall that 
 
-  - Values **BEFORE the comma** in the square bracket specify row(s).
-  - Values **AFTER the comma** in the square bracket specify column(s).
+  - Values **BEFORE the comma** in the square bracket specify **ROW(S)**.
+  - Values **AFTER the comma** in the square bracket specify **COLUMN(S)**.
 
 
 ```r
@@ -600,8 +671,8 @@ my_cars[,1]
 ```
 
 ```
-##  [1]  4  4  7  7  8  9 10 10 10 11 11 12 12 12 12 13 13 13 13 14 14 14 14 15 15
-## [26] 15 16 16 17 17 17 18 18 18 18 19 19 19 20 20 20 20 20 22 23 24 24 24 24 25
+##  [1]  4  4  7  7  8  9 10 10 10 11 11 12 12 12 12 13 13 13 13 14 14 14 14 15 15 15 16 16 17 17
+## [31] 17 18 18 18 18 19 19 19 20 20 20 20 20 22 23 24 24 24 24 25
 ```
 
 ---
@@ -641,7 +712,8 @@ my_cars[c(20,30,40),2]
 
   - Rows 10, 15, and 20 of column 1 of the `my_cars` dataset.
   
-&lt;BR&gt;
+
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt5[
 
 **RECALL:**
 
@@ -650,6 +722,8 @@ my_cars[c(20,30,40),2]
   - **Columns** to be selected are specified **AFTER the comma**.
 
 **The last example in the provided code shows how to use `c()` to group non-consecutive elements**.
+
+]
 
 ---
 
@@ -696,20 +770,20 @@ glimpse(my_starwars)
 ```
 ## Rows: 87
 ## Columns: 14
-## $ name       &lt;chr&gt; "Luke Skywalker", "C-3PO", "R2-D2", "Darth Vader", "Leia Or…
-## $ height     &lt;int&gt; 172, 167, 96, 202, 150, 178, 165, 97, 183, 182, 188, 180, 2…
-## $ mass       &lt;dbl&gt; 77.0, 75.0, 32.0, 136.0, 49.0, 120.0, 75.0, 32.0, 84.0, 77.…
-## $ hair_color &lt;chr&gt; "blond", NA, NA, "none", "brown", "brown, grey", "brown", N…
-## $ skin_color &lt;chr&gt; "fair", "gold", "white, blue", "white", "light", "light", "…
-## $ eye_color  &lt;chr&gt; "blue", "yellow", "red", "yellow", "brown", "blue", "blue",…
-## $ birth_year &lt;dbl&gt; 19.0, 112.0, 33.0, 41.9, 19.0, 52.0, 47.0, NA, 24.0, 57.0, …
-## $ sex        &lt;chr&gt; "male", "none", "none", "male", "female", "male", "female",…
-## $ gender     &lt;chr&gt; "masculine", "masculine", "masculine", "masculine", "femini…
-## $ homeworld  &lt;chr&gt; "Tatooine", "Tatooine", "Naboo", "Tatooine", "Alderaan", "T…
-## $ species    &lt;chr&gt; "Human", "Droid", "Droid", "Human", "Human", "Human", "Huma…
-## $ films      &lt;list&gt; &lt;"The Empire Strikes Back", "Revenge of the Sith", "Return…
-## $ vehicles   &lt;list&gt; &lt;"Snowspeeder", "Imperial Speeder Bike"&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;, "Imp…
-## $ starships  &lt;list&gt; &lt;"X-wing", "Imperial shuttle"&gt;, &lt;&gt;, &lt;&gt;, "TIE Advanced x1",…
+## $ name       &lt;chr&gt; "Luke Skywalker", "C-3PO", "R2-D2", "Darth Vader", "Leia Organa", "Owen Lar…
+## $ height     &lt;int&gt; 172, 167, 96, 202, 150, 178, 165, 97, 183, 182, 188, 180, 228, 180, 173, 17…
+## $ mass       &lt;dbl&gt; 77.0, 75.0, 32.0, 136.0, 49.0, 120.0, 75.0, 32.0, 84.0, 77.0, 84.0, NA, 112…
+## $ hair_color &lt;chr&gt; "blond", NA, NA, "none", "brown", "brown, grey", "brown", NA, "black", "aub…
+## $ skin_color &lt;chr&gt; "fair", "gold", "white, blue", "white", "light", "light", "light", "white, …
+## $ eye_color  &lt;chr&gt; "blue", "yellow", "red", "yellow", "brown", "blue", "blue", "red", "brown",…
+## $ birth_year &lt;dbl&gt; 19.0, 112.0, 33.0, 41.9, 19.0, 52.0, 47.0, NA, 24.0, 57.0, 41.9, 64.0, 200.…
+## $ sex        &lt;chr&gt; "male", "none", "none", "male", "female", "male", "female", "none", "male",…
+## $ gender     &lt;chr&gt; "masculine", "masculine", "masculine", "masculine", "feminine", "masculine"…
+## $ homeworld  &lt;chr&gt; "Tatooine", "Tatooine", "Naboo", "Tatooine", "Alderaan", "Tatooine", "Tatoo…
+## $ species    &lt;chr&gt; "Human", "Droid", "Droid", "Human", "Human", "Human", "Human", "Droid", "Hu…
+## $ films      &lt;list&gt; &lt;"The Empire Strikes Back", "Revenge of the Sith", "Return of the Jedi", "…
+## $ vehicles   &lt;list&gt; &lt;"Snowspeeder", "Imperial Speeder Bike"&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;, "Imperial Speeder Bi…
+## $ starships  &lt;list&gt; &lt;"X-wing", "Imperial shuttle"&gt;, &lt;&gt;, &lt;&gt;, "TIE Advanced x1", &lt;&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;,…
 ```
 
 ---
@@ -727,16 +801,14 @@ unique(my_starwars$species)
 ```
 
 ```
-##  [1] "Human"          "Droid"          "Wookiee"        "Rodian"        
-##  [5] "Hutt"           "Yoda's species" "Trandoshan"     "Mon Calamari"  
-##  [9] "Ewok"           "Sullustan"      "Neimodian"      "Gungan"        
-## [13] NA               "Toydarian"      "Dug"            "Zabrak"        
-## [17] "Twi'lek"        "Vulptereen"     "Xexto"          "Toong"         
-## [21] "Cerean"         "Nautolan"       "Tholothian"     "Iktotchi"      
-## [25] "Quermian"       "Kel Dor"        "Chagrian"       "Geonosian"     
-## [29] "Mirialan"       "Clawdite"       "Besalisk"       "Kaminoan"      
-## [33] "Aleena"         "Skakoan"        "Muun"           "Togruta"       
-## [37] "Kaleesh"        "Pau'an"
+##  [1] "Human"          "Droid"          "Wookiee"        "Rodian"         "Hutt"          
+##  [6] "Yoda's species" "Trandoshan"     "Mon Calamari"   "Ewok"           "Sullustan"     
+## [11] "Neimodian"      "Gungan"         NA               "Toydarian"      "Dug"           
+## [16] "Zabrak"         "Twi'lek"        "Vulptereen"     "Xexto"          "Toong"         
+## [21] "Cerean"         "Nautolan"       "Tholothian"     "Iktotchi"       "Quermian"      
+## [26] "Kel Dor"        "Chagrian"       "Geonosian"      "Mirialan"       "Clawdite"      
+## [31] "Besalisk"       "Kaminoan"       "Aleena"         "Skakoan"        "Muun"          
+## [36] "Togruta"        "Kaleesh"        "Pau'an"
 ```
 
 
@@ -762,12 +834,10 @@ table(my_starwars$hair_color)
 
 ```
 ## 
-##        auburn  auburn, grey auburn, white         black         blond 
-##             1             1             1            13             3 
-##        blonde         brown   brown, grey          grey          none 
-##             1            18             1             1            37 
-##       unknown         white 
-##             1             4
+##        auburn  auburn, grey auburn, white         black         blond        blonde 
+##             1             1             1            13             3             1 
+##         brown   brown, grey          grey          none       unknown         white 
+##            18             1             1            37             1             4
 ```
 
 
@@ -800,17 +870,17 @@ table(my_starwars$sex, my_starwars$hair_color)
 
 ```
 ##                 hair_color
-## sex              auburn auburn, grey auburn, white black blond blonde brown
-##   female              1            0             0     3     0      1     6
-##   hermaphroditic      0            0             0     0     0      0     0
-##   male                0            1             1     9     3      0    11
-##   none                0            0             0     0     0      0     0
+## sex              auburn auburn, grey auburn, white black blond blonde brown brown, grey grey
+##   female              1            0             0     3     0      1     6           0    0
+##   hermaphroditic      0            0             0     0     0      0     0           0    0
+##   male                0            1             1     9     3      0    11           1    1
+##   none                0            0             0     0     0      0     0           0    0
 ##                 hair_color
-## sex              brown, grey grey none unknown white
-##   female                   0    0    4       0     1
-##   hermaphroditic           0    0    0       0     0
-##   male                     1    1   29       0     3
-##   none                     0    0    3       0     0
+## sex              none unknown white
+##   female            4       0     1
+##   hermaphroditic    0       0     0
+##   male             29       0     3
+##   none              3       0     0
 ```
 
 ---
@@ -864,7 +934,12 @@ The output from the `glimpse(my_starwars)` command lists each variable and shows
   
 &lt;br&gt;
 
-**NOTE:** The `glimpse` command is a newer alternative to `str` and will only work if the `tidyverse` package suite is installed and loaded.
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt4[
+NOTE: The `glimpse` command is a newer alternative to `str` and will only work if the `tidyverse` package suite is installed and loaded.
+
+]
+
+
 
 ---
 
@@ -872,10 +947,10 @@ The output from the `glimpse(my_starwars)` command lists each variable and shows
 
 .panel[.panel-name[**Preview**]
 
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt3.mb4[
+**"The greatest value of a picture is when it forces us to notice what we never expected to see.”** .tr[-John W. Tukey
+]]
 
-***"The greatest value of a picture is when it forces us to notice what we never expected to see.”*** *-John W. Tukey* 
-
-&lt;br&gt;
 
 #### Data Mgmt for a Basic Boxplot
 
@@ -887,10 +962,13 @@ The output from the `glimpse(my_starwars)` command lists each variable and shows
    
 - The very first plot is the bare minimum to create a boxplot.
 
-&lt;br&gt;
+.center[
 
-.center[***To save a plot AND print it to the screen, enclose all code in parentheses.***]
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt4[
+**To save a plot AND print it to the screen, enclose all code in parentheses.**
+]
 
+]
 
 ]
 
@@ -1066,13 +1144,7 @@ sw_boxplot4 &lt;- my_starwars_plt |&gt;
 
 &lt;img src="docs_files/figure-html/final plot-1.png" width="648" style="display: block; margin: auto;" /&gt;
 
-]
-
-
-]
-
-
-]
+]]]
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>

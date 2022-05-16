@@ -6,7 +6,7 @@ author: "Penelope Pooler Eisenbies"
 date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:
-    seal: true
+    seal: false
     css: xaringan-themer.css
     nature:
       slideNumberFormat: "%current%/%total%" 
@@ -136,8 +136,27 @@ xaringanExtra::use_animate_css()
 #xaringanExtra::use_animate_all("slide_up")
 ```
 
-### Course Background
+background-image: url("docs_files/images/sloth_faded.png")
+background-size: cover
 
+class: bottom, right
+
+## BUA 455 - Week 1
+
+### R Projects, R Markdown, and R Syntax
+
+<br>
+
+
+#### Penelope Pooler Eisenbies
+
+#### `r Sys.Date()`
+
+[Wikipedia Sloth Page](https://en.wikipedia.org/wiki/Sloth)
+
+---
+
+### Course Background
 
 #### REQUIRED Pre-class Information
 
@@ -199,17 +218,26 @@ What is the current version of R (and hopefully the version on your computer) ca
 - Vigorous Calisthenics
 - Shake and Throw
 
-<br>
+See provided **[tutorial videos]()**, for information in installing (or reinstalling) R and RStudio.
 
-See provided **[tutorial videos]()**, if you need to update your version of R or RStudio.
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt3[
 
-***NOTE: R updates to a new version two or three times a year. When a new version is available, you should delete the old version and download and install the new version of R as soon as possilbe.***
+**NOTE:** R updates to a new version two or three times each year. 
+
+**When a new version is released:** Delete the old version and download and install the new version of R as soon as possible.
+
+]
+
 
 ---
 
 ### HW 1 - Parts 2 and 3
 
-- Will be introduced today and covered in depth on Thursday
+.pull-left[
+
+Introduced today and covered in depth on Thursday
+
+- **Due Wednesday, 9/7/22**
 
 - We will work through the steps to
 
@@ -217,33 +245,46 @@ See provided **[tutorial videos]()**, if you need to update your version of R or
   
   - Create a code_data_output folder
   
+     - Internal folder in R project 
+  
   - Create and save an R Markdown file
   
   - Modify the R Markdown file header and setup chunk
   
   - Create, edit and run R chunks
   
-  <br>
+  - Answer questions based on R output
+  
+- [Instructions for HW 1 - Parts 2 & 3]() are on blackboard (click on link).
 
-- The [HW 1 - Parts 2 and 3 instructions]() are on blackboard (click on link).. 
+]
+
+.pull-right[
+
+![Thoughtful looking owl named Dumbledore](docs_files/images/owl.png)
+[Hawk Creek Wildlife Center](https://www.hawkcreek.org/product/dumbledore-spectacled-owl/)
+
+]
+
+
 
 ---
 
 ### R Project Anatomy for BUA 455
 
-- All Lectures, Assignments and student project work will be contained in R project directories
+.pull-left[
 
-- Project structure can be complex
+Lectures, assignments and projects are contained in R projects.
 
-- In this course, we will keep it simple
+Project structure can be complex, but we will keep it simple.
+
 
 #### Outer Project Folder contains:
 
 - **.Rproj** file
 
-  - This file is required and makes the folder an R project.
-  
-  - You can click on this file to open RStudio, and the Project
+  - **Required** - makes the folder an R project.
+  - Click on .Rproj file to open RStudio and project
   
 - **README.txt** file
 
@@ -253,7 +294,24 @@ See provided **[tutorial videos]()**, if you need to update your version of R or
 
    - R files such as R Markdown files, R Scripts
    - input data (.csv) files and image files
-   - output documents, summary tables, plots
+   - output documents, summary tables, plots]
+
+
+   
+.pull-right[
+
+<br>
+
+<br>
+
+![hard-working beaver](docs_files/images/beaver.png)
+
+[National Zoo](https://nationalzoo.si.edu/animals/beaver)
+
+]
+
+
+]
 
 
 ---
@@ -277,9 +335,14 @@ See provided **[tutorial videos]()**, if you need to update your version of R or
 
 - Get accustomed to copying and pasting setup chunks from previous work
 
-<br>
+.center[
 
-***If Header or Setup have errors, the R Markdown file cannot be knit (rendered)***
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt4[
+**If Header or Setup have errors, the R Markdown file cannot be knit (rendered)**
+]
+
+]
+
 
 ---
 
@@ -300,9 +363,14 @@ See provided **[tutorial videos]()**, if you need to update your version of R or
        - create summary tables and plots
        - do analyses (not in BUA 455)
        
-<br>
+.center[
+
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt4[
+**Most of BUA 455 is spent working WITHIN R chunks to manage and curate data.**
+]
+
+]
     
-***Most of BUA 455 is spent working WITHIN R chunks to manage and curate data.***
 
 ---
 
@@ -449,17 +517,21 @@ After completing the previous instructions, you should have
    - Change this to `include=TRUE` so that your setup chunk will appear in the document if you knit it.
       - In finished documents for a non-technical audience, no (or minimal) R code appears.
       
-      - In this class, we want to see the R code.
-      
 2. Run this chunk by clicking green triangle: ![green R chunk triangle](docs_files/images/rmd_chunk1_buttons.png)
       
 2. Verify that you have all of the packages listed.
 
-***You cannot complete this course if your software is not working properly.***
+.center[
+
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph2.mt3[
+**You cannot complete this course if your software is not working properly.**
+]
+
+]
       
 ]
 
-.panel[.panel-name[R code for setup chunk]
+.panel[.panel-name[R code for HW 1 setup R Chunk]
 
 ```{r setup code for HW 1, eval=F}
 # options for all chunks
@@ -483,9 +555,16 @@ p_loaded()
 > [7] "readr"     "tidyr"     "tibble"    "ggplot2"   "tidyverse" "pacman"  
 
 - If some packages are missing: **make sure you have latest version of R and RStudio**
-- If your software is up to date, then come to Zoom clinic this Friday.
+- If your software is up to date, come to Zoom clinic this Friday.
 
-***You cannot complete this course if your software is not working properly.***
+.center[
+
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph2.mt3[
+**You cannot complete this course if your software is not working properly.**
+]
+
+]
+
 
 ]
 
@@ -601,6 +680,8 @@ The `cars` dataset is a dataset that is internal to the R software.  The code ab
 
 * Where is this copy dataset saved?
 
+
+
 ---
 
 class: middle
@@ -617,6 +698,12 @@ The `my_cars` dataset, which is a saved copy of the R dataset, `cars` has
 
 * `____` **columns (variables)**
 
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt5[
+
+**Number rows and columns of a dataset can be seen in the Global Environment or by viewing the output from .bg-lavender[`glimpse`]**
+
+]
+
 ---
 
 ### Selecting data values by location
@@ -632,13 +719,13 @@ The `my_cars` dataset, which is a saved copy of the R dataset, `cars` has
   
 - All datasets in R are matrices with rows and columns.
 
-- Locations within a dataset can be specifed with square brackets:
+- Locations within a dataset can be specified with square brackets:
     
    - `my_cars[3,2]`:** observation in **3rd row** and **2nd column** of my_cars dataset
 
-   - Additional examples shown below.
+   - Additional examples follow.
   
-   - HW 1 includes questions that give you a chance to practice. 
+   - HW 1 also includes questions about this to provide more practice. 
 
 ---
 
@@ -646,8 +733,8 @@ The `my_cars` dataset, which is a saved copy of the R dataset, `cars` has
 
 - Recall that 
 
-  - Values **BEFORE the comma** in the square bracket specify row(s).
-  - Values **AFTER the comma** in the square bracket specify column(s).
+  - Values **BEFORE the comma** in the square bracket specify **ROW(S)**.
+  - Values **AFTER the comma** in the square bracket specify **COLUMN(S)**.
 
 ```{r selecting rows cols}
 
@@ -687,7 +774,8 @@ my_cars[c(20,30,40),2]
 
   - Rows 10, 15, and 20 of column 1 of the `my_cars` dataset.
   
-<BR>
+
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt5[
 
 **RECALL:**
 
@@ -696,6 +784,8 @@ my_cars[c(20,30,40),2]
   - **Columns** to be selected are specified **AFTER the comma**.
 
 **The last example in the provided code shows how to use `c()` to group non-consecutive elements**.
+
+]
 
 ---
 
@@ -832,7 +922,12 @@ The output from the `glimpse(my_starwars)` command lists each variable and shows
   
 <br>
 
-**NOTE:** The `glimpse` command is a newer alternative to `str` and will only work if the `tidyverse` package suite is installed and loaded.
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt4[
+NOTE: The `glimpse` command is a newer alternative to `str` and will only work if the `tidyverse` package suite is installed and loaded.
+
+]
+
+
 
 ---
 
@@ -840,10 +935,10 @@ The output from the `glimpse(my_starwars)` command lists each variable and shows
 
 .panel[.panel-name[**Preview**]
 
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt3.mb4[
+**"The greatest value of a picture is when it forces us to notice what we never expected to see.”** .tr[-John W. Tukey
+]]
 
-***"The greatest value of a picture is when it forces us to notice what we never expected to see.”*** *-John W. Tukey* 
-
-<br>
 
 #### Data Mgmt for a Basic Boxplot
 
@@ -855,10 +950,13 @@ The output from the `glimpse(my_starwars)` command lists each variable and shows
    
 - The very first plot is the bare minimum to create a boxplot.
 
-<br>
+.center[
 
-.center[***To save a plot AND print it to the screen, enclose all code in parentheses.***]
+.bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt4[
+**To save a plot AND print it to the screen, enclose all code in parentheses.**
+]
 
+]
 
 ]
 
@@ -997,11 +1095,5 @@ sw_boxplot4
 
 ```
 
-]
-
-
-]
-
-
-]
+]]]
 
