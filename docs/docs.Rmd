@@ -500,7 +500,7 @@ After completing the previous instructions, you should have
 
 .panelset[
 
-.panel[.panel-name[Edit the `setup` R Chunk (Chunk 1)]
+.panel[.panel-name[Editing the `setup` R Chunk (Chunk 1)]
 
 - Text can be written and edited between chunks.
 
@@ -807,9 +807,11 @@ my_cars[c(20,30,40),2]
   
      - In that case, the variable can be converted to numeric.
 
-- **Factor** variables, `fct` can be created from character variables or numeric variables. 
+- **Factor** variables, `fct` , or `ord`, can be created from character variables or numeric variables. 
   
   - factor variables are interpreted as categorical variables by R
+  
+  - `ord` refers to ordinal or ordered factor variables.
    
   - factors are useful for plots, tables, and analyses
   
