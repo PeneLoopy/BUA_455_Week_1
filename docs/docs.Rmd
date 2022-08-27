@@ -158,15 +158,20 @@ class: bottom, right
 
 ### Course Background
 
-#### REQUIRED Pre-class Information
+#### Pre-class Information was sent out on Blackboard
 
-- If you haven't already read through the **[Pre-class Information](add google link)**, please do.
+- Install latest versions of R and RStudio
 
----
+- Uninstall previous versions if needed
+
+- If you have trouble, TA's and/or I will help you on Thursday or Friday.
+
+
+<br>
 
 ### Syllabus
 
-- The **[Syllabus](https://docs.google.com/document/d/1jXKwH_IKJ3CXt5uFWiGGODBrwIjPlXHK/edit?usp=sharing&ouid=105789079702095490344&rtpof=true&sd=true)** is available as a Google Doc link on Blackboard.
+- The **[Syllabus](https://docs.google.com/document/d/17GSp0boFPOlwEDTy-MmDIk87md15crge/edit?usp=sharing&ouid=105789079702095490344&rtpof=true&sd=true)** is available as a Google Doc link on Blackboard.
 
 - If substantial changes are made, I will post an announcement on Blackboard.
 
@@ -176,15 +181,12 @@ class: middle
 
 ### Information about R and R Studio
 
-- Pre-class Information Videos are available in Kaltura Channel for this course: **[BUA 455 - Spring 2022](https://video.syr.edu/channel/BUA%2B455%2B-%2BSpring%2B2022/243108882)**
+- Pre-class Information Videos are available in Demo Video Channel for this course: **[BUA 455 - Fall 2022 - Demo Videos](https://video.syr.edu/channel/BUA+455+-+Fall+2022+-+Demo+Videos/269073812/subscribe)**
  
-- Additional Resources: textbook sections and Linkedin Learning videos in **[Pre-class Information](https://rpubs.com/PeneLope_PE/857533)**.
+- **R/RStudio Resources section** on the Blackboard site for the course also includes:
 
-- **R/RStudio Resources section** on the Blackboard site for the course includes:
-
-  - **[Tutorial videos](https://blackboard.syracuse.edu/webapps/blackboard/content/listContentEditable.jsp?content_id=_7736517_1&course_id=_463381_1&mode=reset)** (I will add more)
-  - A curated list of **[text resources](https://docs.google.com/document/d/1qdqO7MTq7scYhFydkJuhA7JIUVQNldNXqMBOspXlNZk/edit?usp=sharing)** I have created for BUA 455
-  - A curated list of **[video resources](https://docs.google.com/document/d/15y4fVHQA2JKUWy7X188Qn8Ph1V-VtLKsjOhubFv6SuI/edit?usp=sharing)** I have created for BUA 455 
+  - A curated list of **[text resources](https://docs.google.com/document/d/1qdqO7MTq7scYhFydkJuhA7JIUVQNldNXqMBOspXlNZk/edit?usp=sharing)** 
+  - A curated list of **[video resources from Linkedin Learning](https://docs.google.com/document/d/15y4fVHQA2JKUWy7X188Qn8Ph1V-VtLKsjOhubFv6SuI/edit?usp=sharing)**
   
 <br>
 
@@ -212,19 +214,19 @@ Each version of R is given a unique name to differentiate them.
 What is the current version of R (and hopefully the version on your computer) called?
 
 - Kick Things
-- Camp Pontanezen
 - One Push-up
+- Funny-Looking Kid
 - Bird Hippie
 - Vigorous Calisthenics
 - Shake and Throw
-
-See provided **[tutorial videos]()**, for information in installing (or reinstalling) R and RStudio.
 
 .bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph3.mt3[
 
 **NOTE:** R updates to a new version two or three times each year. 
 
-**When a new version is released:** Delete the old version and download and install the new version of R as soon as possible.
+**When a new version is released:** Uninstall the old version and download and install the new version of R ASAP. [Video Tutorial](https://video.syr.edu/media/t/1_kr0ogl1i)
+
+Code to see all R versions and version names: `rversions::r_versions()`
 
 ]
 
@@ -255,7 +257,7 @@ Introduced today and covered in depth on Thursday
   
   - Answer questions based on R output
   
-- [Instructions for HW 1 - Parts 2 & 3]() are on blackboard (click on link).
+- [Instructions for HW 1 - Parts 2 & 3](https://blackboard.syracuse.edu/bbcswebdav/pid-8223414-dt-content-rid-94692230_1/xid-94692230_1) are on blackboard (click on link).
 
 ]
 
@@ -352,7 +354,7 @@ Project structure can be complex, but we will keep it simple.
 
 - Text 
   - Can be formatted using simple Markdown language conventions
-  - Very minimal formatting will be required in this course (for dashboards)
+  - Very minimal formatting will be required in this course (for dashboards projects)
   
 - R Chunks
     - Created by clicking green C or Ctrl+Alt+i (Mac users use Cmd)
@@ -417,7 +419,7 @@ Your R project, HW 1 should now be open in R.
 
 #### Adding a code_data_output folder
 
-1. With Files tab open, click folder with green plus sign to add a folder to your project
+1. With Files tab open in R, click folder with green plus sign to add a folder to your project
 
 2. Name the new folder **`code_data_output`** (all lower case with no spaces)
 
@@ -968,7 +970,7 @@ NOTE: The `glimpse` command is a newer alternative to `str` and will only work i
 Code shows data management for a plot with comments
 
 ```{r starwars_data_mgmt}
-# dataset my_starwars_plt is created for the plot
+# dataset my_starwars_plt is created for a plot
 # used select command to select variables
 # used filter command to filter data to only to species, Humans and Droid
 # used mutate command to create new variable bmi
@@ -1142,7 +1144,6 @@ background-size: cover
 
 ]
 
-]
 
 
 
