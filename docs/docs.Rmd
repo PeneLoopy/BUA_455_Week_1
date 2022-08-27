@@ -158,14 +158,42 @@ class: bottom, right
 
 ### Course Background
 
-#### Pre-class Information was sent out on Blackboard
+.pull-left[ 
 
-- Install latest versions of R and RStudio
+<br>
 
-- Uninstall previous versions if needed
+Data is a now a **public-facing** aspect of business and management.
 
-- If you have trouble, TA's and/or I will help you on Thursday or Friday.
+  - This course focuses on data management NOT database management
 
+  - You will learn how to acquire, combine, 'wrangle' and curate data 
+
+  - All assignments, tests, and final dashboard project are done in **R and Rstudio**
+
+]
+
+.pull-right[
+
+![Data skills flowchart](docs_files/images/data_project_flow_chart.png)
+]
+
+
+---
+
+### Pre-class Information 
+
+
+- Announcement was sent out on Blackboard
+
+  - Personal Laptop with Windows or MAC OC required (can't be a loaner)
+  
+      - Min. of 4 GB RAM and 256 GB of Storage (more preferred)
+
+  - Install latest versions of **[R](https://cran.r-project.org/)** and **[RStudio](https://www.rstudio.com/)** (click on links)
+
+      - Uninstall previous versions if needed
+
+- If you have trouble installing R and RStudio, TA's and/or I will help you on Thursday or Friday.
 
 <br>
 
