@@ -1,0 +1,586 @@
+---
+title: "HW 1  - Parts 2 and 3: Instructions"
+author: "Penelope Pooler Eisenbies"
+date: "Due 9/7/2022"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 4
+    toc_float: true
+---
+
+```{r setup, include=F}
+
+# this line specifies options for default options for all R Chunks
+knitr::opts_chunk$set(echo=T, 
+                      highlight=T,
+                      scipen=100)
+
+# install helper package (pacman) if needed
+if (!require("pacman")) install.packages("pacman", repos = "http://lib.stat.cmu.edu/R/CRAN/")
+
+# install and load required packages
+# pacman should be first package in parentheses and then list others
+pacman::p_load(pacman, tidyverse, gridExtra, magrittr)
+
+# verify packages (comment out in finished documents)
+p_loaded()
+
+```
+
+## Purpose
+
+This assignment will give you experience with:
+
+- Creating an R Project Directory
+
+- Creating a code_data_output folder within your R project to store files
+
+- Creating, saving, and using an R Markdown file
+
+- Reviewing some basic R syntax
+
+---
+
+## NOTES:
+
+- Familiarity with R and R Studio infrastructure, including R Projects and R Markdown, is necessary for you to succeed in this course.
+
+- Throughout this course you will be managing and manipulating data for different goals.
+
+- You will not be tested directly on file management, but you can not manage data well until you can manage files well on your computer.
+
+- File management details are not trivial. 
+
+   - Good file management is necessary for good data management and will make all of your work more efficient. 
+
+***
+
+## Instructions
+
+### HW 1 - Parts 2 and 3 - First Steps
+
+0. Create a BUA455 folder on your computer, NOT in Downloads.
+
+  - ALL work for this class will be saved to this folder 
+  
+  - My folder is named: **`00_BUA_455_All`**
+  
+<br>
+
+1. Create and name your first R project for your first HW Assignment:
+
+   i. File > New Project > New Directory > New Project 
+   
+   ii. In box, name this project: 
+   
+       - **`HW 1 <first name> <last name>`**
+    
+       - My project would be named 
+        
+           **`HW 1 Penelope Pooler`**
+    
+   iii. Click Create Project
+   
+<br>
+
+2. Create a folder in HW 1 project labeled **`code_data_output`**.
+
+   i. With Files tab open in R, click folder with green plus sign to add a folder to your project
+
+   ii. Name the new folder **`code_data_output`** (all lower case with no spaces)
+
+
+   iii. Click OK to create new folder
+
+   iv. Verify that new folder is appears in Files window then close RStudio.
+
+   v. Reopen the project by clicking on .Rproj file in the R project directory.
+
+      - You do not have close and re-open RStudio every time.
+   
+      - This first time it is helpful to test that your project and **code_data_output`** have been correctly created.
+
+<br>
+
+
+3. Create a NEW R Markdown file with title HW 1 and you as the Author.
+  
+
+4. Save this file as 'HW1_FirstName_LastName' to your code_data_output folder.
+
+    - Markdown files (.Rmd) should have no spaces in the file name.
+
+<br>
+
+5. Copy and paste the text shown below into your setup chunk.
+
+
+6. Click the green triangle or type Ctrl/Cmd + Shift + Enter to run this setup chunk.
+   
+    - This was demonstrated in the Week 1 Lectures
+
+```
+# this line specifies options for default options for all R Chunks
+knitr::opts_chunk$set(echo=T, 
+                      highlight=T,
+                      scipen=100)
+
+# install helper package (pacman) if needed
+if (!require("pacman")) install.packages("pacman", repos = "http://lib.stat.cmu.edu/R/CRAN/")
+
+# install and load required packages
+# pacman should be first package in parentheses and then list others
+pacman::p_load(pacman, tidyverse, gridExtra, magrittr)
+
+# verify packages (comment out in finished documents)
+p_loaded()
+
+```
+
+### HW 1 - Part 2
+
+**Notes:**
+
+- HW 1 - Part 1 includes the questions about the syllabus, hardware requirements and R/RStudio versions.
+
+- Recall that in Week 1, we worked with the first default R Chunk that is included when you open an R Markdown file.
+
+- In your **`HW 1`** Markdown file that you have created, you should see a default chunk that appears as shown here:
+
+```{r cars}
+summary(cars)
+```
+
+#### Steps to Follow
+
+1. In your **`HW 1`** Markdown file that you have created, you will need delete the first chunk and create a new one OR replace the R code in this chunk with the code below.
+
+- **Two ways to create a new chunk:**
+
+   - Click green C or type `Ctrl+Alt+i` (Mac users use Cmd)
+   
+<br>
+
+- The new chunk title should be **`examining the cars data`**. 
+  
+   - Add the title to the chunk header after r within the bracket: 
+   
+      - e.g. **`{r examining the cars data}`**
+<br> 
+  
+- The text of this chunk (without the header) is shown below.
+
+   - Recall that text after **`#`** symbols are comments and are ignored by R
+
+   - Copy and paste this R code into your new R chunk:
+
+```
+# cars is an internal R dataset
+# this code saves a copy of the cars data in the Global Environment
+my_cars <- cars
+
+# examine the dataset mycars using glimpse
+glimpse(my_cars)
+
+# same command with piping:
+# read |> as 'is sent to' or 'goes into'
+my_cars |>
+  glimpse()
+
+# select rows 3, 4 and 5 only:
+my_cars[3:5,]
+
+# select column 1 only:
+my_cars[,1]
+
+# select observations 10, 11, and 12 within column 1:
+my_cars[10:12, 1]
+
+# select observations 20, 30, and 40, within column 2:
+my_cars[c(20,30,40),2]
+
+```
+
+---
+
+2. Answer the following Blackboard questions using the code provided above and adding some code of your own as specified in the questions below.
+
+<br>
+
+#### Blackboard (BB) Questions
+
+##### **BB Question 1**  
+
+The **`cars`** dataset is a dataset that is internal to the R software.  The code above saves a **copy** of this dataset with a new name.
+
+* Where is this copy dataset saved?
+
+<br>
+  
+##### **BB Question 2**  
+
+The name of this copy of the cars dataset is `____`.
+
+- Type dataset name **EXACTLY** as it appears in the R code.
+
+<br>
+
+##### **BB Question 3**  
+
+This copy of the cars dataset has   
+
+- `____` rows (observations)
+
+- `____` columns (variables)
+
+<br>
+
+##### **BB Question 4**  
+
+The R command **`my_cars[3:5,]`** prints out rows       
+`____`, `____`, and `____` of the **`my_cars`** dataset.
+
+<br>
+
+##### **BB Question 5**  
+
+The command **`my_cars[,1]`** prints out column  
+`____` of the **`my_cars`** dataset.
+
+<br>
+
+##### **BB Question 6**    
+
+Complete the command **`my_cars[________, ____]`** to select **rows 12 through 15** of **column 2** of the **`my_cars`** dataset.
+
+**Notes:**
+
+- Rows to be selected are specified before the comma.
+
+- Columns to be selected are specified after the comma.
+
+- **`:`** is used to specify consecutive columns or rows in R.
+
+- **Add your code to the chunk you created with the code above.**
+
+   - Replace `___` with correct numbers and symbols in your code before submitting it in R.
+
+   - Test your code to verify that it is correct.
+   
+   - You can click on the dataset in the **Global Environment** to view the full dataset and verify your work.
+   
+   - Your grade on HW 1 is based on both your submitted R project and your Blackboard questions.
+   
+<br>
+  
+##### **BB Question 7**   
+
+Complete the command **`my_cars[c(________), ____]`** to select rows 10, 15, and 20 of column 1 of the **`my_cars`** dataset.
+
+**Notes:**
+
+- See notes above for Question 6
+
+- Non-consecutive elements within **`c()`** are separated by commas
+
+---
+
+### HW 1 - Part 3
+
+**Notes:**
+
+- In the Week 1 lectures, we also worked with the **`starwars`** dataset.
+
+- The **starwars** dataset is internal to the **`dplyr`** package (included in **`tidyverse`**) that we loaded in our **`setup`** chunk above. 
+
+- Code from those R Chunks is included below and more is added.
+
+   - **R code below will not run unless the `setup` chunk is run first.**
+   
+- These chunks are provided as a reference to show how to basic R data manipulations and summaries
+
+- R code with and without piping is included as a reference
+
+- In future work, most R code will be shown with piping only
+
+---
+
+#### Steps to Follow
+
+1. In your **`HW 1`** Markdown file that you have created, you will need delete the second chunk.
+
+2. Create **FIVE** new empty R chunks
+
+- **Two ways to create a new chunk:**
+
+   - Click green C or type `Ctrl+Alt+i` (Mac users use Cmd)
+   
+<br>
+
+- The new chunk titles should be:
+
+   - **`starwars 1`**   **`starwars 2`**   **`starwars 3`**   **`starwars 4`**   **`starwars 5`**
+  
+   - Add the titles to the chunk header after r within the bracket: 
+   
+      - e.g. **`{r starwars 1}`**
+<br> 
+  
+- The text of each chunk (without the header) is shown below.
+
+   - Recall that text after **`#`** symbols are comments and are ignored by R
+
+   - Copy and paste this R code into your new R chunk:
+   
+
+---
+
+
+
+#### R Code for **`starwars 1`** Chunk
+
+```
+# save a copy of starwars data to your global environment
+my_starwars <- starwars
+
+# examine the data with glimpse
+glimpse(my_starwars)
+
+# same glimpse command with piping
+my_starwars |> glimpse()
+
+```
+
+
+
+#### R Code for **`starwars 2`** Chunk
+
+```
+# examine the list of species with unique command
+# to specify a variable WITHIN a dataset we use $, the accessor operator
+unique(my_starwars$species)
+
+# same unique command using piping and pull command
+my_starwars |> pull(species) |> unique()
+
+# examine the list of haircolors
+# again, we use $ to specify hair_color within this dataset
+unique(my_starwars$hair_color)
+
+```
+
+
+
+#### R Code for **`starwars 3`** Chunk
+
+```
+# use table to summarize starwars data by sex and species
+table(my_starwars$sex, my_starwars$hair_color)
+
+# save this table as an object
+sw_gender_hrclr_smry <- table(my_starwars$sex, my_starwars$hair_color)
+
+```
+
+
+
+#### R Code for **`starwars 4`** Chunk
+
+```
+# summarize height of starwars characters
+summary(my_starwars$height)
+
+# calculate the mean height (also included in summary above)
+# NA's must be excluded with na.rm=T
+mean(my_starwars$height, na.rm=T)
+
+# same mean command with piping and pull command
+my_starwars |> pull(height) |> mean(na.rm=T)
+
+# NA's must also be excluded for min(), max(), median, sd(), etc.
+sd(my_starwars$height, na.rm=T)
+
+# same sd command with piping and pull command
+my_starwars |> pull(height) |> sd(na.rm=T)
+
+```
+
+
+
+#### R Code for **`starwars 5`** Chunk
+
+```
+# summarize sex
+summary(my_starwars$sex)
+
+# summarize sex using table
+table(my_starwars$sex)
+
+# summarize sex but use as.factor
+summary(as.factor(my_starwars$sex))
+
+# save this last summary as an object
+sw_sex_smry <- summary(as.factor(my_starwars$sex))
+
+```
+
+---
+
+3. Answer the following Blackboard Questions:
+
+<br>
+
+#### Blackboard (BB) Questions
+
+##### **BB Question 8**  
+
+The name of this copy of the starwars dataset is `____`.
+
+- Type dataset name **EXACTLY** as it appears in the R code.
+
+<br>
+
+##### **BB Question 9**  
+
+This copy of the starwars dataset has     
+
+- `_____` rows (observations)
+
+- `_____` columns (variables)
+
+<br>
+
+##### **BB Question 10**  
+
+The output from the **`glimpse(my_starwars)`** command lists each variable and shows its type.     
+
+- This dataset has `_____` character variables (labeled ***`<chr>`***).
+
+- This dataset has _____ numeric variables 
+  
+  - Numeric variables include both decimal (***`<dbl>`***) and integer (***`<int>`***) variables.
+  
+<br>
+
+- **NOTES:** 
+  
+   - **`glimpse()`** is a newer alternative to the **`str()`** command.    
+  
+   - **`glimpse()`**will only work if the **`tidyverse`** package suite is installed and loaded.
+
+<br>
+
+##### **BB Question 11**  
+
+The command **`table(my_starwars$sex, my_starwars$hair_color)`** prints out a summary table of the **`my_starwars`** data showing how many characters of each sex classification have each hair color. 
+
+Use this summary to fill in the blanks below.
+
+- Other than **`none`** and **`unknown`**, 
+there are `_____` hair color categories.
+
+  - **Note:** You could also use **`unique(my_starwars$hair_color)`** to answer this first question but not the next two.
+
+<br>
+  
+- There are `_____` female characters with brown hair in this dataset.
+
+- There are `_____` male characters with brown hair in this dataset.
+
+<br>
+
+##### **BB Question 12**  
+
+The R command **`summary(my_starwars$sex)`** does not provide useful information because **`sex`** is a character variable in this dataset. 
+  
+Fill in the blanks below with just text (no spaces) that complete two options that can summarize the data in this variable:
+
+
+- **Notes:**
+
+  - The first option is the **same command used in Question 11**
+
+  - The second option coerces the variable **`sex`** to be a factor using the R command **`as.factor`**.
+
+  - These commands are included in the provided R code.
+
+<br>
+  
+- **`_____(my_starwars$sex)`**
+
+
+- **`summary(_____(my_starwars$sex))`**
+ 
+---
+
+### HW 1 - Parts 2 and 3 - Final Steps
+
+1. Save your HW1 R Markdown File
+
+- You are **NOT** required to knit this file to create an HTML file.
+   
+- You are welcome to try and we (myself and/or TA) can assist you.
+
+<br>
+
+2. Answer all 12 Blackboard questions associated with this assignment.
+
+3. Zip your entire Project Directory into a compressed File and submit it.
+
+- **NOTE:** 
+
+  - In HW 2 and subsequent HW assignments, you will be asked to create a README file for your R Project, but that is **NOT** required for this assignment. 
+
+***
+
+## Grading Criteria
+
+### Pre-class Survey (20%)
+
+These required questions help me gauge your prior knowledge of R and other information that is helpful.
+
+### HW 1 - Part 1 (20%)
+
+Completing this set of Blackboard Questions is required and verifies your knowledge of the syllabus and the course hardware and software requirements.
+
+### HW 1 - Parts 2 and 3 (60%)
+
+The Blackboard (BB) Questions (1-12) and the submitted R project together comprise 60% of HW 1. 
+
+<br>
+
+- **(12 pts.)** Each Blackboard question for HW1 - Parts 2 and 3 is worth 1 point.  
+
+- **(2 pts.)** Completing **HW 1 - First Steps** as specified.  
+
+- **(2 pts.)** Part 2: Full credit for  
+  
+  - Correctly replacing default **`cars`** chunk R code with code provided above.
+  
+  - This chunk must have correct title in chunk header:
+  
+    - **`examining the cars data`**
+    
+  - Adding to the provided R code:
+  
+    - BB Questions 6 and 7 require that you write new commands that should be saved to your R chunk (titled **`examining the cars data`**).
+    
+<br>
+    
+- **(4 pts.)** Part 3: Full credit for
+
+  - Correctly creating **FIVE** new R chunks with correct headers and provided code in each chunk.
+  
+<br>
+
+- **(2 pts.)** Completing the **HW 1 - Final Steps** and correctly submitting your zipped HW1 project directory.
+
+---
+
+
+
+  
+
+
+

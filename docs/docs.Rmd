@@ -978,7 +978,7 @@ NOTE: The `glimpse` command is a newer alternative to `str` and will only work i
 
 - Plotting data well requires data management and planning 
 
-   - The preview below ALSO includes data management skills we will cover
+   - The preview ALSO includes data management skills we will cover
    
 - The very first plot is the bare minimum to create a boxplot.
 
