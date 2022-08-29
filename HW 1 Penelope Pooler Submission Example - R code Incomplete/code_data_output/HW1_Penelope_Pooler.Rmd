@@ -1,0 +1,124 @@
+---
+title: "HW 1"
+author: "Penelope Pooler Eisenbies"
+date: "1/31/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+# this line specifies options for default options for all R Chunks
+knitr::opts_chunk$set(echo=T, highlight=T)
+
+## Setup ====
+
+# suppress scientific notation 
+options(scipen=100)
+
+# install and load packages we'll need
+# install.packages only needed first time after new R version install
+# install.packages("pacman", repos = "http://cran.us.r-project.org")
+pacman::p_load(pacman, tidyverse, gridExtra)
+
+# tidyverse - a large suite of packages that work together
+# magrittr - needed for piping
+
+# verify packages 
+# remove # in front of library() or p_loaded()
+# library()
+# p_loaded()
+
+
+```
+
+cars chunk below
+
+```{r examining the cars data}
+
+# note that cars is an internal R dataset
+# make your own copy of the cars data in the Global Environment
+# name it something different than cars
+my_cars <- cars
+
+# examine the dataset mycars using glimpse
+glimpse(my_cars)
+
+# same command with piping:
+# read |> as 'is sent to' or 'goes into'
+my_cars |>
+  glimpse()
+
+# select rows 3, 4 and 5 only:
+my_cars[3:5,]
+
+# select column 1 only:
+my_cars[,1]
+
+# select observations 10, 11, and 12 within column 1:
+my_cars[10:12, 1]
+
+# select observations 20, 30, and 40, within column 2:
+my_cars[c(20,30,40),2]
+
+#HW 1 Question 6
+#  select rows 12 through 15 of column 2 of the my_cars dataset
+
+
+#HW 1 Question 7
+#  select rows 10, 15, and 20 of column 1 of the my_cars dataset
+
+
+```
+
+
+starwars chunk below
+
+```{r examining the starwars data}
+
+# save the starwars data to your global environment
+my_starwars <- starwars
+
+# examine the data
+glimpse(my_starwars)
+
+# examine the list of species
+# note that to indicate a variable WITHIN a dataset we use $, the accessor operator
+unique(my_starwars$species)
+
+# examine the list of haircolors
+# again, we use $ to specify hair_colr within this dataset
+unique(my_starwars$hair_color)
+
+# do a quick summary of these data by sex and species
+table(my_starwars$sex, my_starwars$hair_color)
+
+# save this table as an object
+sw_gender_hrclr_smry <- table(my_starwars$sex, my_starwars$hair_color)
+
+# summarize height of starwars characters
+summary(my_starwars$height)
+
+# calculate the mean
+mean(my_starwars$height)
+
+# NA's must be excluded with na.rm=T
+# also true for min(), max(), median, sd(), etc.
+mean(my_starwars$height, na.rm=T)
+sd(my_starwars$height, na.rm=T)
+
+# summarize sex
+summary(my_starwars$sex)
+
+# summarize sex using table
+table(my_starwars$sex)
+
+# summarize sex but use as.factor
+summary(as.factor(my_starwars$sex))
+
+# save this last summary as an object
+sw_sex_smry <- summary(as.factor(my_starwars$sex))
+
+```
+
+
+

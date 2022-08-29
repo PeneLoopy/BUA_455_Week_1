@@ -11,7 +11,7 @@
 
 <meta name="author" content="Penelope Pooler Eisenbies" />
 
-<meta name="date" content="2022-08-28" />
+<meta name="date" content="2022-08-29" />
 
 <title>BUA 455 - Week 1</title>
 
@@ -1600,23 +1600,26 @@ div.tocify {
 
 <h1 class="title toc-ignore">BUA 455 - Week 1</h1>
 <h4 class="author">Penelope Pooler Eisenbies</h4>
-<h4 class="date">2022-08-28</h4>
+<h4 class="date">2022-08-29</h4>
 
 </div>
 
 
 <pre class="r"><code># this line specifies options for default options for all R Chunks
-# scipen option suppresses scientific notation
-knitr::opts_chunk$set(echo=T, highlight=T, scipen=100)
+knitr::opts_chunk$set(echo=T, 
+                      highlight=T)
 
-# install helper package that loads and installs other packages, if needed
+# suppress scientific notation
+options(scipen=100)
+
+# install helper package (pacman) if needed
 if (!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;, repos = &quot;http://lib.stat.cmu.edu/R/CRAN/&quot;)</code></pre>
 <pre><code>## Loading required package: pacman</code></pre>
 <pre class="r"><code># install and load required packages
-# flexdashboard not required for today, but make sure you can install and load it
-pacman::p_load(pacman,tidyverse, gridExtra, magrittr)
+# pacman should be first package in parentheses and then list others
+pacman::p_load(pacman, tidyverse, gridExtra, magrittr)
 
-# verify packages
+# verify packages (comment out in finished documents)
 p_loaded()</code></pre>
 <pre><code>##  [1] &quot;magrittr&quot;  &quot;gridExtra&quot; &quot;forcats&quot;   &quot;stringr&quot;   &quot;dplyr&quot;     &quot;purrr&quot;    
 ##  [7] &quot;readr&quot;     &quot;tidyr&quot;     &quot;tibble&quot;    &quot;ggplot2&quot;   &quot;tidyverse&quot; &quot;pacman&quot;</code></pre>
@@ -1982,13 +1985,18 @@ working properly.</strong></p>
 </div>
 <div id="r-code-for-hw-1-setup-r-chunk" class="section level3">
 <h3>R code for HW 1 setup R Chunk</h3>
-<pre class="r"><code># options for all chunks
-knitr::opts_chunk$set(echo = TRUE, highlight = TRUE, scipen=100)
+<pre class="r"><code># this line specifies options for default options for all R Chunks
+knitr::opts_chunk$set(echo=T, 
+                      highlight=T)
 
-# install helper package (pacman) to install and load other packages
+# suppress scientific notation
+options(scipen=100)
+
+# install helper package (pacman) if needed
 if (!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;, repos = &quot;http://lib.stat.cmu.edu/R/CRAN/&quot;)
 
-# install and load required packages including pacman first
+# install and load required packages
+# pacman should be first package in parentheses and then list others
 pacman::p_load(pacman, tidyverse, gridExtra, magrittr)
 
 # verify packages (comment out in finished documents)

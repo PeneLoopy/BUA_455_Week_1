@@ -564,22 +564,21 @@ After completing the previous instructions, you should have
 .panel[.panel-name[R code for HW 1 setup R Chunk]
 
 ```{r setup code for HW 1, eval=F}
-# options for all chunks
-knitr::opts_chunk$set(echo = TRUE, highlight = TRUE, scipen=100)
+# default options for all R Chunks
+knitr::opts_chunk$set(echo=T, highlight=T)
+options(scipen=100)
 
-# install helper package (pacman) to install and load other packages
+# install helper package (pacman) if needed
 if (!require("pacman")) install.packages("pacman", repos = "http://lib.stat.cmu.edu/R/CRAN/")
 
-# install and load required packages including pacman first
+# install and load required packages (pacman first)
 pacman::p_load(pacman, tidyverse, gridExtra, magrittr)
 
 # verify packages (comment out in finished documents)
 p_loaded()
 ```
 
-#### Output from `p_loaded()` command.
-
-- You should see 12 packages listed:
+#### Output from `p_loaded()` command: 12 listed packages
 
 > [1] "magrittr"  "gridExtra" "forcats"   "stringr"   "dplyr"     "purrr"    
 > [7] "readr"     "tidyr"     "tibble"    "ggplot2"   "tidyverse" "pacman"  

@@ -13,17 +13,20 @@ output:
 ```{r setup, include=TRUE}
 
 # this line specifies options for default options for all R Chunks
-# scipen option suppresses scientific notation
-knitr::opts_chunk$set(echo=T, highlight=T, scipen=100)
+knitr::opts_chunk$set(echo=T, 
+                      highlight=T)
 
-# install helper package that loads and installs other packages, if needed
+# suppress scientific notation
+options(scipen=100)
+
+# install helper package (pacman) if needed
 if (!require("pacman")) install.packages("pacman", repos = "http://lib.stat.cmu.edu/R/CRAN/")
 
 # install and load required packages
-# flexdashboard not required for today, but make sure you can install and load it
-pacman::p_load(pacman,tidyverse, gridExtra, magrittr)
+# pacman should be first package in parentheses and then list others
+pacman::p_load(pacman, tidyverse, gridExtra, magrittr)
 
-# verify packages
+# verify packages (comment out in finished documents)
 p_loaded()
 
 ```
@@ -351,13 +354,18 @@ After completing the previous instructions, you should have
 ### R code for HW 1 setup R Chunk
 
 ```{r setup code for HW 1, eval=F}
-# options for all chunks
-knitr::opts_chunk$set(echo = TRUE, highlight = TRUE, scipen=100)
+# this line specifies options for default options for all R Chunks
+knitr::opts_chunk$set(echo=T, 
+                      highlight=T)
 
-# install helper package (pacman) to install and load other packages
+# suppress scientific notation
+options(scipen=100)
+
+# install helper package (pacman) if needed
 if (!require("pacman")) install.packages("pacman", repos = "http://lib.stat.cmu.edu/R/CRAN/")
 
-# install and load required packages including pacman first
+# install and load required packages
+# pacman should be first package in parentheses and then list others
 pacman::p_load(pacman, tidyverse, gridExtra, magrittr)
 
 # verify packages (comment out in finished documents)
