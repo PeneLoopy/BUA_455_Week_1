@@ -13,8 +13,10 @@ output:
 
 # this line specifies options for default options for all R Chunks
 knitr::opts_chunk$set(echo=T, 
-                      highlight=T,
-                      scipen=100)
+                      highlight=T)
+
+# suppress scientific notation
+options(scipen=100)
 
 # install helper package (pacman) if needed
 if (!require("pacman")) install.packages("pacman", repos = "http://lib.stat.cmu.edu/R/CRAN/")
@@ -123,8 +125,10 @@ This assignment will give you experience with:
 ```
 # this line specifies options for default options for all R Chunks
 knitr::opts_chunk$set(echo=T, 
-                      highlight=T,
-                      scipen=100)
+                      highlight=T)
+
+# suppress scientific notation
+options(scipen=100)
 
 # install helper package (pacman) if needed
 if (!require("pacman")) install.packages("pacman", repos = "http://lib.stat.cmu.edu/R/CRAN/")
@@ -298,11 +302,13 @@ Complete the command **`my_cars[c(________), ____]`** to select rows 10, 15, and
 
    - **R code below will not run unless the `setup` chunk is run first.**
    
-- These chunks are provided as a reference to show how to basic R data manipulations and summaries
+<br>
+   
+- These chunks are provided as a reference to show how to do basic R data manipulations and summaries.
 
-- R code with and without piping is included as a reference
+- R code with and without piping is included as a reference.
 
-- In future work, most R code will be shown with piping only
+- In future work, most R code will be shown with piping only.
 
 ---
 
@@ -435,9 +441,11 @@ sw_sex_smry <- summary(as.factor(my_starwars$sex))
 
 ##### **BB Question 8**  
 
-The name of this copy of the starwars dataset is `____`.
+The name of the saved copy of the starwars dataset is `____`.
 
 - Type dataset name **EXACTLY** as it appears in the R code.
+
+- The copy of the starwars dataset is saved and named in the `starwars 1` Chunk.
 
 <br>
 
@@ -449,11 +457,13 @@ This copy of the starwars dataset has
 
 - `_____` columns (variables)
 
+- These answers are found by examining the `glimpse` command in the in the `starwars 1` Chunk.
+
 <br>
 
 ##### **BB Question 10**  
 
-The output from the **`glimpse(my_starwars)`** command lists each variable and shows its type.     
+The output from the **`glimpse(my_starwars)`** command in the `starwars 1` Chunk lists each variable and shows its type.     
 
 - This dataset has `_____` character variables (labeled ***`<chr>`***).
 
@@ -473,14 +483,14 @@ The output from the **`glimpse(my_starwars)`** command lists each variable and s
 
 ##### **BB Question 11**  
 
-The command **`table(my_starwars$sex, my_starwars$hair_color)`** prints out a summary table of the **`my_starwars`** data showing how many characters of each sex classification have each hair color. 
+The command **`table(my_starwars$sex, my_starwars$hair_color)`** in the `starwars 2` Chunk prints out a summary table of the **`my_starwars`** data showing how many characters of each sex classification have each hair color. 
 
 Use this summary to fill in the blanks below.
 
 - Other than **`none`** and **`unknown`**, 
 there are `_____` hair color categories.
 
-  - **Note:** You could also use **`unique(my_starwars$hair_color)`** to answer this first question but not the next two.
+  - **Note:** You could also use **`unique(my_starwars$hair_color)`** in the `starwars 2` Chunk to answer this first question but not the next two.
 
 <br>
   
@@ -503,7 +513,7 @@ Fill in the blanks below with just text (no spaces) that complete two options th
 
   - The second option coerces the variable **`sex`** to be a factor using the R command **`as.factor`**.
 
-  - These commands are included in the provided R code.
+  - These commands are included in the provided R code in the `starwars 5` Chunk.
 
 <br>
   

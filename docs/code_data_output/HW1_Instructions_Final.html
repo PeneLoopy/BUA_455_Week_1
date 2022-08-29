@@ -1619,8 +1619,10 @@ this setup chunk.</p>
 </ol>
 <pre><code># this line specifies options for default options for all R Chunks
 knitr::opts_chunk$set(echo=T, 
-                      highlight=T,
-                      scipen=100)
+                      highlight=T)
+
+# suppress scientific notation
+options(scipen=100)
 
 # install helper package (pacman) if needed
 if (!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;, repos = &quot;http://lib.stat.cmu.edu/R/CRAN/&quot;)
@@ -1821,12 +1823,15 @@ are separated by commas</p></li>
 <li><strong>R code below will not run unless the <code>setup</code>
 chunk is run first.</strong></li>
 </ul></li>
-<li><p>These chunks are provided as a reference to show how to basic R
-data manipulations and summaries</p></li>
+</ul>
+<p><br></p>
+<ul>
+<li><p>These chunks are provided as a reference to show how to do basic
+R data manipulations and summaries.</p></li>
 <li><p>R code with and without piping is included as a
-reference</p></li>
+reference.</p></li>
 <li><p>In future work, most R code will be shown with piping
-only</p></li>
+only.</p></li>
 </ul>
 <hr />
 <div id="steps-to-follow-1" class="section level4">
@@ -1945,11 +1950,13 @@ sw_sex_smry &lt;- summary(as.factor(my_starwars$sex))
 <h4>Blackboard (BB) Questions</h4>
 <div id="bb-question-8" class="section level5">
 <h5><strong>BB Question 8</strong></h5>
-<p>The name of this copy of the starwars dataset is
+<p>The name of the saved copy of the starwars dataset is
 <code>____</code>.</p>
 <ul>
-<li>Type dataset name <strong>EXACTLY</strong> as it appears in the R
-code.</li>
+<li><p>Type dataset name <strong>EXACTLY</strong> as it appears in the R
+code.</p></li>
+<li><p>The copy of the starwars dataset is saved and named in the
+<code>starwars 1</code> Chunk.</p></li>
 </ul>
 <p><br></p>
 </div>
@@ -1959,14 +1966,17 @@ code.</li>
 <ul>
 <li><p><code>_____</code> rows (observations)</p></li>
 <li><p><code>_____</code> columns (variables)</p></li>
+<li><p>These answers are found by examining the <code>glimpse</code>
+command in the in the <code>starwars 1</code> Chunk.</p></li>
 </ul>
 <p><br></p>
 </div>
 <div id="bb-question-10" class="section level5">
 <h5><strong>BB Question 10</strong></h5>
 <p>The output from the
-<strong><code>glimpse(my_starwars)</code></strong> command lists each
-variable and shows its type.</p>
+<strong><code>glimpse(my_starwars)</code></strong> command in the
+<code>starwars 1</code> Chunk lists each variable and shows its
+type.</p>
 <ul>
 <li><p>This dataset has <code>_____</code> character variables (labeled
 <strong><em><code>&lt;chr&gt;</code></em></strong>).</p></li>
@@ -1994,7 +2004,7 @@ loaded.</p></li>
 <h5><strong>BB Question 11</strong></h5>
 <p>The command
 <strong><code>table(my_starwars$sex, my_starwars$hair_color)</code></strong>
-prints out a summary table of the
+in the <code>starwars 2</code> Chunk prints out a summary table of the
 <strong><code>my_starwars</code></strong> data showing how many
 characters of each sex classification have each hair color.</p>
 <p>Use this summary to fill in the blanks below.</p>
@@ -2004,8 +2014,9 @@ characters of each sex classification have each hair color.</p>
 color categories.</p>
 <ul>
 <li><strong>Note:</strong> You could also use
-<strong><code>unique(my_starwars$hair_color)</code></strong> to answer
-this first question but not the next two.</li>
+<strong><code>unique(my_starwars$hair_color)</code></strong> in the
+<code>starwars 2</code> Chunk to answer this first question but not the
+next two.</li>
 </ul></li>
 </ul>
 <p><br></p>
@@ -2033,7 +2044,8 @@ options that can summarize the data in this variable:</p>
 <li><p>The second option coerces the variable
 <strong><code>sex</code></strong> to be a factor using the R command
 <strong><code>as.factor</code></strong>.</p></li>
-<li><p>These commands are included in the provided R code.</p></li>
+<li><p>These commands are included in the provided R code in the
+<code>starwars 5</code> Chunk.</p></li>
 </ul></li>
 </ul>
 <p><br></p>
