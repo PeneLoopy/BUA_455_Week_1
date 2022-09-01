@@ -11,7 +11,7 @@
 
 <meta name="author" content="Penelope Pooler Eisenbies" />
 
-<meta name="date" content="2022-08-29" />
+<meta name="date" content="2022-08-31" />
 
 <title>BUA 455 - Week 1</title>
 
@@ -1600,7 +1600,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">BUA 455 - Week 1</h1>
 <h4 class="author">Penelope Pooler Eisenbies</h4>
-<h4 class="date">2022-08-29</h4>
+<h4 class="date">2022-08-31</h4>
 
 </div>
 
@@ -1881,7 +1881,7 @@ spaces)</p>
 assignments, lectures, etc.</li>
 </ul></li>
 <li><p>Click OK to create new folder</p></li>
-<li><p>Verify that new folder is appears in Files window then close
+<li><p>Verify that new folder appears in Files window then close
 RStudio.</p></li>
 <li><p>Reopen the project by clicking on .Rproj file in the R project
 directory.</p></li>
@@ -2183,7 +2183,7 @@ management.</p></li>
 <li><p>Locations within a dataset can be specified with square
 brackets:</p>
 <ul>
-<li><p><code>my_cars[3,2]</code>:** observation in <strong>3rd
+<li><p><code>my_cars[3,2]</code>: observation in <strong>3rd
 row</strong> and <strong>2nd column</strong> of my_cars dataset</p></li>
 <li><p>Additional examples follow.</p></li>
 <li><p>HW 1 also includes questions about this to provide more
@@ -2337,6 +2337,9 @@ unique(my_starwars$species)</code></pre>
 <pre class="r"><code># same task with piping uses select command:
 my_starwars |&gt;
   select(species) |&gt; unique()</code></pre>
+<p><strong>NOTES:</strong> - In HW 1, you will see the following R code:
+<code>my_starwars |&gt; pull(species) |&gt; unique() -</code>pull<code>is used to select **a single variable** and</code>select`
+can be used to select <strong>one OR more variables</strong></p>
 <hr />
 </div>
 <div id="using-table-to-examine-one-variable" class="section level3">
@@ -2358,8 +2361,7 @@ table(my_starwars$hair_color)</code></pre>
 ##       unknown         white 
 ##             1             4</code></pre>
 <pre class="r"><code># using piping to select variable
-my_starwars |&gt;
-  select(hair_color) |&gt;table()</code></pre>
+my_starwars |&gt; select(hair_color) |&gt;table()</code></pre>
 <hr />
 </div>
 <div id="using-table-to-examine-two-variables" class="section level3">
