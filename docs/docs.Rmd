@@ -884,7 +884,7 @@ my_starwars |> select(species) |> unique()
 **NOTES:** 
 
 - In HW 1, you will see the following R code:
-`my_starwars` |> pull(species) |> unique()
+`my_starwars |> pull(species) |> unique()`
 - `pull` is used to select **a single variable** and `select` can be used to select **one OR more variables**
   
 ---
