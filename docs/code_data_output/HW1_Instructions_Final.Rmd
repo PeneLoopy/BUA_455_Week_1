@@ -62,26 +62,24 @@ This assignment will give you experience with:
 
 ### HW 1 - Parts 2 and 3 - First Steps
 
-0. Create a BUA455 folder on your computer, **NOT in Downloads**.
+**`0.`** Create a BUA455 folder on your computer, **NOT in Downloads**.
 
-  - ALL work for this class will be saved to this folder 
-  - My folder is named: **`00_BUA_455_All`**
-  
-<br>
+- ALL work for this class will be saved to this folder 
+- In this example, my folder is named: **`00_BUA_455_All`**
 
-1. Create and name your first R project for your first HW Assignment:
+<br>  
 
-   i. File > New Project > New Directory > New Project 
+**`1.`** Create and name your first R project for your first HW Assignment:
+
+i. File > New Project > New Directory > New Project 
    
-   ii. In box, name this project: 
+ii. In box, name this project: 
    
-       - **`HW 1 <first name> <last name>`**
+- **`HW 1 <first name> <last name>`**
     
-       - My project would be named 
-        
-           **`HW 1 Penelope Pooler`**
+- My project name: **`HW 1 Penelope Pooler`**
     
-   iii. Click Create Project
+iii. Click Create Project
    
 <br>
 

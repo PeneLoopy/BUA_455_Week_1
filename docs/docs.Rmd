@@ -199,7 +199,7 @@ Data is a now a **public-facing** aspect of business and management.
 
 ### Syllabus
 
-- The **[Syllabus](https://docs.google.com/document/d/17GSp0boFPOlwEDTy-MmDIk87md15crge/edit?usp=sharing&ouid=105789079702095490344&rtpof=true&sd=true)** is available as a Google Doc link on Blackboard.
+- The **[Syllabus](https://docs.google.com/document/d/1tmnlkBwYjih8NSWwAv2N6-x8d219hrCd/edit?usp=sharing&ouid=105789079702095490344&rtpof=true&sd=true)** is available as a Google Doc link on Blackboard.
 
 - If substantial changes are made, I will post an announcement on Blackboard.
 
@@ -209,7 +209,8 @@ class: middle
 
 ### Information about R and R Studio
 
-- Pre-class Information Videos are available in a [playlist on videos.syr.edu](https://video.syr.edu/playlist/dedicated/269073812/1_p7ywds2n/)
+- Pre-class Information Videos are available in a **[playlist on videos.syr.edu](https://video.syr.edu/playlist/dedicated/269073812/1_p7ywds2n/)**
+
   - Link to these videos is also on Blackboard under **R / R Studio BUA 455 Demo Videos**
  
 - **R/RStudio Resources section** on the Blackboard site for the course also includes:
@@ -253,7 +254,7 @@ What is the current version of R (and hopefully the version on your computer) ca
 
 - R updates to a new version two or three times each year. 
 
-- **When a new version is released:**  Uninstall the old version and download and install the new version of R ASAP. [Video Tutorial](https://video.syr.edu/media/t/1_kr0ogl1i)
+- **When a new version is released:**  Uninstall the old version and download and install the new version of R ASAP. **[Video Tutorial](https://video.syr.edu/media/t/1_kr0ogl1i)**
 
 - Code to see all R versions and version names: `rversions::r_versions()`
 
@@ -386,7 +387,7 @@ Project structure can be complex for large or long projects, but we will keep it
   - Very minimal formatting will be required in this course (for dashboards projects)
   
 - R Chunks
-    - Created by clicking green C or Ctrl+Alt+i (Mac users use Cmd)
+    - Created by clicking green C ![](docs_files/images/add_chunk.png) or **`Ctrl+Alt+i`** (Mac users use **`Cmd`**)
     - Have a header to specify options for that chunk
     - Contain R code to: 
        - import and wrangle data
@@ -409,26 +410,23 @@ Project structure can be complex for large or long projects, but we will keep it
 
 .pull-left[
 
-0. Create a BUA455 folder on your computer, **NOT in Downloads**.
+`0.` Create a BUA455 folder on your computer, **NOT in Downloads**.
 
-  - ALL work for this class will be saved to this folder 
-  - My folder is named: **`00_BUA_455_All`**
+- ALL work for this class will be saved to this folder 
+- In this example, my folder is named: **`00_BUA_455_All`**
   
-<br>
 
-1. Create and name your first R project for your first HW Assignment:
+`1.` Create and name your first R project for your first HW Assignment:
 
-   i. File > New Project > New Directory > New Project 
+i. File > New Project > New Directory > New Project 
    
-   ii. In box, name this project: 
+ii. In box, name this project: 
    
-       - **`HW 1 <first name> <last name>`**
+- **`HW 1 <first name> <last name>`**
     
-       - My project would be named 
-        
-           **`HW 1 Penelope Pooler`**
+- My project name: **`HW 1 Penelope Pooler`**
     
-   iii. Click Create Project
+iii. Click Create Project
    
 ]
 
@@ -703,9 +701,7 @@ class: middle
 
 ### Week 1 In-class Exercises (TP Lecture 2 - Q1)
 
-***TurningPoint Session ID: bua455s22***
-
-**This is also Question 1 of HW 1 - Parts 2 and 3**
+***TurningPoint Session ID: bua455s22  (Question 1 of HW 1 - Parts 2 and 3)***
 
 The `cars` dataset is a dataset that is internal to the R software.  The previous saves a **copy** of this dataset with a new name.
 
@@ -721,9 +717,7 @@ class: middle
 
 ### Week 1 In-class Exercises (TP Lecture 2 - Q2)
 
-***TurningPoint Session ID: bua455s22***
-
-**This is also Question 3 of HW 1 - Parts 2 and 3**
+***TurningPoint Session ID: bua455s22 (Question 3 of HW 1 - Parts 2 and 3)***
 
 The `my_cars` dataset, which is a saved copy of the R dataset, `cars` has   
 
