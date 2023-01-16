@@ -1,7 +1,7 @@
 ---
 title: "HW 1  - Parts 2 and 3: Instructions"
 author: "Penelope Pooler Eisenbies"
-date: "Due 9/7/2022"
+date: "Due 1/25/2023"
 output: 
   html_document:
     toc: true
@@ -62,10 +62,9 @@ This assignment will give you experience with:
 
 ### HW 1 - Parts 2 and 3 - First Steps
 
-0. Create a BUA455 folder on your computer, NOT in Downloads.
+0. Create a BUA455 folder on your computer, **NOT in Downloads**.
 
   - ALL work for this class will be saved to this folder 
-  
   - My folder is named: **`00_BUA_455_All`**
   
 <br>
@@ -123,8 +122,8 @@ This assignment will give you experience with:
     - This was demonstrated in the Week 1 Lectures
 
 ```
-# this line specifies options for default options for all R Chunks
-knitr::opts_chunk$set(echo=T, 
+# this line specifies options for default options for all R chunks
+knitr::opts_chunk$set(echo=T,  
                       highlight=T)
 
 # suppress scientific notation
@@ -148,7 +147,7 @@ p_loaded()
 
 - HW 1 - Part 1 includes the questions about the syllabus, hardware requirements and R/RStudio versions.
 
-- Recall that in Week 1, we worked with the first default R Chunk that is included when you open an R Markdown file.
+- Recall that in Week 1, we worked with the first default R chunk that is included when you open an R Markdown file.
 
 - In your **`HW 1`** Markdown file that you have created, you should see a default chunk that appears as shown here:
 
@@ -158,7 +157,7 @@ summary(cars)
 
 #### Steps to Follow
 
-1. In your **`HW 1`** Markdown file that you have created, you will need delete the first chunk and create a new one OR replace the R code in this chunk with the code below.
+1. In your **`HW 1`** Markdown file that you have created, you will delete the first chunk and create a new one OR replace the R code in this chunk with the code below.
 
 - **Two ways to create a new chunk:**
 
@@ -254,6 +253,8 @@ The command **`my_cars[,1]`** prints out column
 
 <br>
 
+##### **R code for Questions 6 and 7 must be added to your created chunk in your submitted R Markdown file for HW 1 for full credit.**
+
 ##### **BB Question 6**    
 
 Complete the command **`my_cars[________, ____]`** to select **rows 12 through 15** of **column 2** of the **`my_cars`** dataset.
@@ -296,11 +297,11 @@ Complete the command **`my_cars[c(________), ____]`** to select rows 10, 15, and
 
 - In the Week 1 lectures, we also worked with the **`starwars`** dataset.
 
-- The **starwars** dataset is internal to the **`dplyr`** package (included in **`tidyverse`**) that we loaded in our **`setup`** chunk above. 
+  - Recall that the **`starwars`** dataset is internal to the **`dplyr`** package (included in **`tidyverse`**) that we loaded in our **`setup`** chunk above. 
 
-- Code from those R Chunks is included below and more is added.
+- Code from the R chunks we cover in Week 1 of BUA 455 is included below and more code is added.
 
-   - **R code below will not run unless the `setup` chunk is run first.**
+   - **Provided R code below will not run unless the `setup` chunk is run first.**
    
 <br>
    
@@ -445,7 +446,7 @@ The name of the saved copy of the starwars dataset is `____`.
 
 - Type dataset name **EXACTLY** as it appears in the R code.
 
-- The copy of the starwars dataset is saved and named in the `starwars 1` Chunk.
+- The copy of the starwars dataset is saved and named in the **`starwars 1`** chunk.
 
 <br>
 
@@ -457,13 +458,13 @@ This copy of the starwars dataset has
 
 - `_____` columns (variables)
 
-- These answers are found by examining the `glimpse` command in the in the `starwars 1` Chunk.
+- These answers are found by examining the **`glimpse`** command in the in the **`starwars 1`** chunk.
 
 <br>
 
 ##### **BB Question 10**  
 
-The output from the **`glimpse(my_starwars)`** command in the `starwars 1` Chunk lists each variable and shows its type.     
+The output from the **`glimpse(my_starwars)`** command in the **`starwars 1`** chunk lists each variable and shows its type.     
 
 - This dataset has `_____` character variables (labeled ***`<chr>`***).
 
@@ -483,14 +484,14 @@ The output from the **`glimpse(my_starwars)`** command in the `starwars 1` Chunk
 
 ##### **BB Question 11**  
 
-The command **`table(my_starwars$sex, my_starwars$hair_color)`** in the `starwars 2` Chunk prints out a summary table of the **`my_starwars`** data showing how many characters of each sex classification have each hair color. 
+The command **`table(my_starwars$sex, my_starwars$hair_color)`** in the **`starwars 2`** chunk prints out a summary table of the **`my_starwars`** data showing how many characters of each sex classification have each hair color. 
 
 Use this summary to fill in the blanks below.
 
 - Other than **`none`** and **`unknown`**, 
 there are `_____` hair color categories.
 
-  - **Note:** You could also use **`unique(my_starwars$hair_color)`** in the `starwars 2` Chunk to answer this first question but not the next two.
+  - **Note:** You could also use **`unique(my_starwars$hair_color)`** in the `starwars 2` chunk to answer this first question but not the next two.
 
 <br>
   
@@ -513,7 +514,7 @@ Fill in the blanks below with just text (no spaces) that complete two options th
 
   - The second option coerces the variable **`sex`** to be a factor using the R command **`as.factor`**.
 
-  - These commands are included in the provided R code in the `starwars 5` Chunk.
+  - These commands are included in the provided R code in the `starwars 5` chunk.
 
 <br>
   
@@ -538,9 +539,7 @@ Fill in the blanks below with just text (no spaces) that complete two options th
 
 3. Zip your entire Project Directory into a compressed File and submit it.
 
-- **NOTE:** 
-
-  - In HW 2 and subsequent HW assignments, you will be asked to create a README file for your R Project, but that is **NOT** required for this assignment. 
+- **NOTE:** In HW 2 and subsequent HW assignments, you will be asked to create a README file for your R Project, but that is **NOT** required for this assignment. 
 
 ***
 
