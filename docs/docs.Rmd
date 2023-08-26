@@ -199,7 +199,7 @@ Data is a now a **public-facing** aspect of business and management.
 
 ### Syllabus
 
-- The **[Syllabus](https://docs.google.com/document/d/1tmnlkBwYjih8NSWwAv2N6-x8d219hrCd/edit?usp=sharing&ouid=105789079702095490344&rtpof=true&sd=true)** is available as a Google Doc link on Blackboard.
+- The **[Syllabus](https://docs.google.com/document/d/1JuL5_LCswTM3GisvMR9wIP2ROmxnjMwh2rhBL7wQDxs/edit?usp=sharing)** is available as a Google Doc link on Blackboard.
 
 - If substantial changes are made, I will post an announcement on Blackboard.
 
@@ -209,9 +209,9 @@ class: middle
 
 ### Information about R and R Studio
 
-- Pre-class Information Videos are available in a **[playlist on videos.syr.edu](https://video.syr.edu/playlist/dedicated/269073812/1_p7ywds2n/)**
+- `BUA 455 Basics` Videos are available in a **[playlist on videos.syr.edu]()**
 
-  - Link to these videos is also on Blackboard under **R / R Studio BUA 455 Demo Videos**
+  - Link to these videos is also on Blackboard under **BUA 455 Demo Videos**
  
 - **R/RStudio Resources section** on the Blackboard site for the course also includes:
 
@@ -244,6 +244,7 @@ What is the current version of R (and hopefully the version on your computer) ca
 - Funny-Looking Kid
 - One Push-up
 - Innocent and Trusting
+- Beagle Scouts
 - Bird Hippie
 - Vigorous Calisthenics
 - Shake and Throw
@@ -254,7 +255,7 @@ What is the current version of R (and hopefully the version on your computer) ca
 
 - R updates to a new version two or three times each year. 
 
-- **When a new version is released:**  Uninstall the old version and download and install the new version of R ASAP. **[Video Tutorial](https://video.syr.edu/media/t/1_kr0ogl1i)**
+- **When a new version is released:**  Uninstall the old version and download and install the new version of R ASAP.
 
 - Code to see all R versions and version names: `rversions::r_versions()`
 
@@ -269,7 +270,7 @@ What is the current version of R (and hopefully the version on your computer) ca
 
 Introduced today and covered in depth on Thursday
 
-- **Due Wednesday, 1/25/23**
+- **Due Wednesday, 9/6/23**
 
 - We will work through the steps to
 
@@ -287,7 +288,7 @@ Introduced today and covered in depth on Thursday
   
   - Answer questions based on R output
   
-- **[Instructions for HW 1 - Parts 2 & 3](https://blackboard.syracuse.edu/webapps/blackboard/content/listContentEditable.jsp?content_id=_8620832_1&course_id=_485886_1)** are on blackboard in the HW Assignment 1 Folder (click on link).
+- Instructions for HW 1 - Parts 2 & 3 are on blackboard in the HW Assignment 1 Folder 
 
 ]
 
@@ -357,7 +358,7 @@ Project structure can be complex for large or long projects, but we will keep it
 - User specifies type of output and RStudio creates header
   - HTML Notebook (NB), HTML, HTML Dashboard, Word, Powerpoint
   
-- Can (and should) be modified but use care
+- Can be modified but use care or file will not knit (render.)
 
 #### Setup Chunk
 
