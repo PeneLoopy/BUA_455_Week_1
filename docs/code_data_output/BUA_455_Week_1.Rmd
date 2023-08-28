@@ -64,15 +64,15 @@ Data is a now a **public-facing** aspect of business and management.
 
 ### Syllabus
 
-- The **[Syllabus](https://docs.google.com/document/d/1tmnlkBwYjih8NSWwAv2N6-x8d219hrCd/edit?usp=sharing&ouid=105789079702095490344&rtpof=true&sd=true)** is available as a Google Doc link on Blackboard.
+- The **[Syllabus](https://docs.google.com/document/d/1JuL5_LCswTM3GisvMR9wIP2ROmxnjMwh2rhBL7wQDxs/edit?usp=sharing)** is available as a Google Doc link on Blackboard.
 
 - If substantial changes are made, I will post an announcement on Blackboard.
 
 ### Information about R and R Studio
 
-- Pre-class Information Videos are available in a **[playlist on videos.syr.edu](https://video.syr.edu/playlist/dedicated/269073812/1_p7ywds2n/)**
+- `BUA 455 Basics` Videos are available in a **[playlist on videos.syr.edu]()**
 
-  - Link to these videos is also on Blackboard under **R / R Studio BUA 455 Demo Videos**
+  - Link to these videos is also on Blackboard under **BUA 455 Demo Videos**
  
 - **R/RStudio Resources section** on the Blackboard site for the course also includes:
 
@@ -96,26 +96,28 @@ Data is a now a **public-facing** aspect of business and management.
 
 ***TurningPoint Session ID: bua455s22***
 
-**This is also Question 6 of HW 1 - Part 1**
+**This is also Question 5 of HW 1 - Part 1**
 
 Each version of R is given a unique name to differentiate them. 
 
-What is the current version of R (and hopefully the version on your computer) called?
+What is the current version of R?
 
-- Kick Things
-- One Push-up
-- Funny-Looking Kid
-- Bird Hippie
-- Vigorous Calisthenics
-- Shake and Throw
+- 2.1.3
+- 2.2.2
+- 4.3.1
+- 4.3.4
+- 5.1.2
 
 <br>
 
-**NOTE:** R updates to a new version two or three times each year. 
+**NOTES:** 
 
-**When a new version is released:** Uninstall the old version and download and install the new version of R ASAP. **[Video Tutorial](https://video.syr.edu/media/t/1_kr0ogl1i)**
+- R updates to a new version two or three times each year. 
 
-Code to see all R versions and version names: `rversions::r_versions()`
+- **When a new version is released:**  Uninstall the old version and download and install the new version of R ASAP.
+
+- Code to see the current R version: `R.version.string`
+- Code to see the current RStudio version: `RStudio.Version()$version`
 
 ---
 
@@ -123,7 +125,7 @@ Code to see all R versions and version names: `rversions::r_versions()`
 
 Introduced today and covered in depth on Thursday
 
-- **Due Wednesday, 9/7/22**
+- **Due Wednesday, 9/6/23**
 
 - We will work through the steps to
 
@@ -141,7 +143,7 @@ Introduced today and covered in depth on Thursday
   
   - Answer questions based on R output
   
-- [Instructions for HW 1 - Parts 2 & 3](https://blackboard.syracuse.edu/bbcswebdav/pid-8223414-dt-content-rid-94692230_1/xid-94692230_1) are on blackboard (click on link).
+- Instructions for HW 1 - Parts 2 & 3 are on Blackboard in the HW Assignment 1 Folder 
 
 ---
 
@@ -297,6 +299,8 @@ Your R project, HW 1 should now be open in R.
    - Notice that this opens an **UN-SAVED** file labeled `Untitled1`.
    
 <br>
+
+**NOTE:  Due date in screenshot is from a previous semester.**
 
 ![R markdown file creation](docs_files/images/new_R_Markdown_file.png)
 
@@ -536,6 +540,21 @@ The `my_cars` dataset, which is a saved copy of the R dataset, `cars` has
    - Additional examples follow.
   
    - HW 1 also includes questions about this to provide more practice. 
+
+---
+
+### The First of Many Comments about ChatGPT
+
+ChatGPT became readily available within the past year, and it is undeniably an excellent search engine for R code. 
+
+**ChatGPT is a great way to learn code while doing assignments, but NOT during tests.**
+
+```{r chatgpt example, echo=F}
+
+knitr::include_graphics("docs_files/images/L1_ChatGPT.png")
+
+```
+
 
 ---
 
