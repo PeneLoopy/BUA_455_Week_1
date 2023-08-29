@@ -237,7 +237,7 @@ class: middle
 
 ***PointSolutions Session ID: bua455s22          (Question 5 of HW 1 - Part 1)***
 
-Each version of R is given a unique name to differentiate them. 
+Each version of R is given a unique number to differentiate them. 
 
 What is the current version of R?
 
