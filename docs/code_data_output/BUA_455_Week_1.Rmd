@@ -98,7 +98,7 @@ Data is a now a **public-facing** aspect of business and management.
 
 **This is also Question 5 of HW 1 - Part 1**
 
-Each version of R is given a unique name to differentiate them. 
+Each version of R is given a unique number to differentiate them. 
 
 What is the current version of R?
 

@@ -233,9 +233,9 @@ class: middle
 
 class: middle
 
-### Week 1 In-class Exercises (PS L1 - Q1)
+### Week 1 In-class Exercises (L1 - Q1)
 
-***PointSolutions Session ID: bua455s22          (Question 5 of HW 1 - Part 1)***
+***Session ID: bua455f23          (Question 5 of HW 1 - Part 1)***
 
 Each version of R is given a unique number to differentiate them. 
 
@@ -701,9 +701,9 @@ my_cars |> glimpse()
 
 class: middle
 
-### Week 1 In-class Exercises (TP Lecture 2 - Q1)
+### Week 1 In-class Exercises (Lecture 2 - Q1)
 
-***TurningPoint Session ID: bua455s22  (Question 1 of HW 1 - Parts 2 and 3)***
+***Session ID: bua455f23  (Question 1 of HW 1 - Parts 2 and 3)***
 
 The `cars` dataset is a dataset that is internal to the R software.  The previous saves a **copy** of this dataset with a new name.
 
@@ -717,9 +717,9 @@ The `cars` dataset is a dataset that is internal to the R software.  The previou
 
 class: middle
 
-### Week 1 In-class Exercises (TP Lecture 2 - Q2)
+### Week 1 In-class Exercises (Lecture 2 - Q2)
 
-***TurningPoint Session ID: bua455s22 (Question 3 of HW 1 - Parts 2 and 3)***
+***Session ID: bua455f23 (Question 3 of HW 1 - Parts 2 and 3)***
 
 The `my_cars` dataset, which is a saved copy of the R dataset, `cars` has   
 
@@ -809,9 +809,9 @@ my_cars[c(20,30,40),2]
 
 ---
 
-### Week 1 In-class Exercises (TP Lecture 2 - Q3)
+### Week 1 In-class Exercises (Lecture 2 - Q3)
 
-***TurningPoint Session ID: bua455s22***
+***Session ID: bua455f23***
 
 **This is also Question 7 of HW 1 - Parts 2 and 3**
 
@@ -963,9 +963,9 @@ mean(my_starwars$height, na.rm=T)
 
 ---
 
-### Week 1 In-class Exercises (TP Lecture 2 - Q4)
+### Week 1 In-class Exercises (Lecture 2 - Q4)
 
-**TurningPoint Session ID: bua455s22**
+**Session ID: bua455f23**
 
 **This is also Question 10 of HW 1 - Parts 2 and 3**
 
