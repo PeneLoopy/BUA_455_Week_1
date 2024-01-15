@@ -64,13 +64,13 @@ Data is a now a **public-facing** aspect of business and management.
 
 ### Syllabus
 
-- The **[Syllabus](https://docs.google.com/document/d/1JuL5_LCswTM3GisvMR9wIP2ROmxnjMwh2rhBL7wQDxs/edit?usp=sharing)** is available as a Google Doc link on Blackboard.
+- The **[Syllabus](https://docs.google.com/document/d/1MQ_pIR-nr3n8Ng3rykAHPJCKMk8W7RurrjSL9oQx-Io/edit?usp=sharing)** is available as a Google Doc link on Blackboard.
 
 - If substantial changes are made, I will post an announcement on Blackboard.
 
 ### Information about R and R Studio
 
-- `BUA 455 Basics` Videos are available in a **[playlist on videos.syr.edu]()**
+- `BUA 455 Basics` Videos are available in a **[playlist on videos.syr.edu](https://video.syr.edu/playlist/dedicated/269073812/1_p7ywds2n/)**
 
   - Link to these videos is also on Blackboard under **BUA 455 Demo Videos**
  
@@ -104,7 +104,7 @@ What is the current version of R?
 
 - 2.1.3
 - 2.2.2
-- 4.3.1
+- 4.3.2
 - 4.3.4
 - 5.1.2
 
@@ -125,7 +125,7 @@ What is the current version of R?
 
 Introduced today and covered in depth on Thursday
 
-- **Due Wednesday, 9/6/23**
+- **Due Wednesday, 1/24/24**
 
 - We will work through the steps to
 
@@ -173,7 +173,7 @@ Project structure can be complex, but we will keep it simple.
 
 ---
 
-### Basic Anatomy of R Markdown Files (.Rmd)
+### Basic Anatomy of R Markdown Files (.Rmd) and Quarto Files (.qmd)
 
 #### Header
 
@@ -912,7 +912,7 @@ my_starwars_plt <- my_starwars_plt |>
 
 <br>
 
-**You may submit an 'Engagement Question or Comment' about Week 1 lectures until Thursday, 9/1, at midnight on Blackboard.**
+You may submit an 'Engagement Question' about each lecture until midnight on the day of the lecture. **A minimum of four submissions are required during the semester.**
 
 
 
